@@ -1,0 +1,192 @@
+/* GENERAL */
+* {
+    font-family: 'Poppins';
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+
+:root {
+    --main-color: -webkit-linear-gradient(180deg, #15B9B9 0%, #3C1DFF 100%);
+    --2nd-main-color: #ffffffcc;
+    --text-color: #fff;
+    --big-font: 4.5rem;
+    --h2-font: 1.9rem;
+    --p-font: 1rem;
+}
+
+/* body {
+    background: var(--bg-color);
+    color: var(--text-color);
+} */
+
+/* GENERAL */
+
+
+/* Navbar */
+/* #nav  {
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 13%;
+    transition: 3s;
+}
+
+#logo {
+    width: 37px;
+    height: 37px;
+}
+
+.navbar a {
+    color: var(--text-color);
+    font-size: 1rem;
+    padding: 10px 20px;
+    font-weight: 450;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background: var(--main-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    transition: 3s;
+} */
+
+/* #menu-icon {
+    font-size: 28px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+} */
+/* End Navbar */
+
+
+
+/* Section */
+section {
+    padding: 120px 13%;
+    /* background: #202020; */
+}
+
+#home1 {
+    background-color: #202020;
+}
+
+.uyi {
+    font-size: var(--big-font);
+    font-weight: bolder;
+    background: -webkit-linear-gradient(180deg, #15B9B9 0%, #3C1DFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+    margin-bottom: -15px;
+}
+
+.one-parent {
+    display: flex;
+    justify-content: end;
+}
+
+.one-parent>.one {
+    height: 8px;
+    width: 400px;
+    border-radius: 2px;
+    /* align-items: center; */
+    background: -webkit-linear-gradient(180deg, #15B9B9 0%, #3C1DFF 100%);
+    opacity: 1;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+.full {
+    /* background: #202020; */
+    position: relative;
+    z-index: 2;
+    color: var(--text-color);
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.full::after {
+    content: "Full Stack Developer & UI/UX Designer";
+    position: absolute;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    color: transparent;
+    left: 6px;
+    top: 6px;
+    opacity: 0.1;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.home-text h4 {
+    /* background: #202020; */
+    color: #8F8F8FA3;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    line-height: 27px;
+    letter-spacing: 0.5px;
+}
+
+#btn {
+    background: var(--main-color);
+    border: none;
+    border-radius: 6px;
+    height: 49px;
+    width: 181px;
+}
+
+.social-links {
+    z-index: 2;
+    max-width: 300px;
+    /* width: 100%; */
+    display: flex;
+    margin-bottom: 0.5em;
+    /* padding: 0.5em; */
+    border-radius: 2.5rem;
+    justify-content: space-between;
+}
+
+.icon-wrapper {
+    padding: 7px;
+    width: 40px;
+    height:40px;
+    border-radius: 50%;
+    background-color: #353535;
+    display: flex;
+    justify-content: center;
+}
+
+.icon-wrapper>a>i {
+    color: white;
+}
+
+.home {
+    position: relative;
+    height: 720px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 6rem;
+    align-items: center;
+}
+
+.home-img img {
+    /* background: #202020; */
+    max-width: 100%;
+    width: 409.3px;
+    height: auto;
+}
+
+div {
+    /* background: #202020; */
+}
