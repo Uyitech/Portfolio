@@ -9,7 +9,7 @@
 }
 
 :root {
-    --main-color: -webkit-linear-gradient(180deg, #15B9B9 0%, #3C1DFF 100%);
+    --main-color: #647bff;
     --2nd-main-color: #ffffffcc;
     --text-color: #fff;
     --big-font: 3.8rem;
@@ -147,7 +147,7 @@ header {
     align-items: center;
     column-gap: 0.5rem;
     font-size: 1.1rem;
-    color: -webkit-linear-gradient(180deg, #15B9B9 0%, #3C1DFF 100%);
+    color: #647bff;
 }
 
 .home-text h3::before {
@@ -158,17 +158,32 @@ header {
     left: -15px;
     width: 20px;
     height: 2px;
-    background: -webkit-linear-gradient(180deg, #15B9B9 0%, #3C1DFF 100%);
+    background: #647bff;
 }
 
-.uyi {
+.home-text h3::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+    right: -35px;
+    width: 20px;
+    height: 2px;
+    background: #647bff;
+}
+
+.home-text h1 {
+    /* line-height: 4.8rem; */
     font-size: var(--big-font);
     font-weight: bolder;
     background: white;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: 1px;
-    margin-bottom: 15px;
+}
+
+.home-text .color{
+    color: #647bff;
 }
 
 .one-parent {
@@ -178,16 +193,16 @@ header {
 
 .one-parent>.one {
     height: 8px;
-    width: 400px;
+    width: 450px;
     border-radius: 2px;
-    background: -webkit-linear-gradient(180deg, #15B9B9 0%, #3C1DFF 100%);
+    background: #647bff;
     opacity: 1;
+    margin-top: -10px;
     margin-bottom: 20px;
-    margin-right: 10px;
+    /* margin-right: 10px; */
 }
 
 .full {
-    /* background: #202020; */
     position: relative;
     z-index: 2;
     color: var(--text-color);
@@ -210,17 +225,38 @@ header {
 
 .home-text p {
     color: rgba(143, 143, 143, 0.64);
-    font-size: 20px;
+    font-size: 1.23rem;
     font-weight: 400;
-    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
     line-height: 27px;
     letter-spacing: 0.5px;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.social .bx {
+    font-size: 1.3rem;
+    padding: 10px;
+    border-radius: 50%;
+    color: #fff;
+    background: #353535;
+}
+
+.social .bx:hover{
+    background: #647bff;
+    transition: 0.3s all linear;
 }
 
 #btn {
     background: var(--main-color);
     border: none;
+    outline: none;
     border-radius: 6px;
-    height: 49px;
-    width: 181px;
+    height: 45px;
+    width: 160px;
+    color: #fff;
 }
