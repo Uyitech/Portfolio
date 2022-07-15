@@ -12,7 +12,7 @@
     --main-color: -webkit-linear-gradient(180deg, #15B9B9 0%, #3C1DFF 100%);
     --2nd-main-color: #ffffffcc;
     --text-color: #fff;
-    --big-font: 4.5rem;
+    --big-font: 3.8rem;
     --h2-font: 1.9rem;
     --p-font: 1rem;
 }
@@ -95,30 +95,80 @@ header {
     transform: rotate(45deg) translate(-5px, -5px);
 }
 
+/* End Navbar */
 
 
 
 /* Section */
-section {
-    padding: 3rem 0 2rem;
-    position: fixed;
-    background: #000 url("../img/bg.png") top right no-repeat;
-    left: 0;
+.home {
+    background: #202020;
     background-size: cover;
-    right: 0;
-    top: 0;
-    height: 700px;
-    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 7rem;
+}
+
+.home-content {
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-img .profile {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 2rem;
+}
+
+.home-img .profile {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.home-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.home-text h3 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    font-size: 1.1rem;
+    color: -webkit-linear-gradient(180deg, #15B9B9 0%, #3C1DFF 100%);
+}
+
+.home-text h3::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+    left: -15px;
+    width: 20px;
+    height: 2px;
+    background: -webkit-linear-gradient(180deg, #15B9B9 0%, #3C1DFF 100%);
 }
 
 .uyi {
     font-size: var(--big-font);
     font-weight: bolder;
-    background: -webkit-linear-gradient(180deg, #15B9B9 0%, #3C1DFF 100%);
+    background: white;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: 1px;
-    margin-bottom: -15px;
+    margin-bottom: 15px;
 }
 
 .one-parent {
@@ -141,7 +191,7 @@ section {
     position: relative;
     z-index: 2;
     color: var(--text-color);
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -154,12 +204,12 @@ section {
     left: 6px;
     top: 6px;
     opacity: 0.1;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
 }
 
-.home-text h4 {
-    color: #8F8F8FA3;
+.home-text p {
+    color: rgba(143, 143, 143, 0.64);
     font-size: 20px;
     font-weight: 400;
     margin-bottom: 15px;
