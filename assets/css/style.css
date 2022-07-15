@@ -97,8 +97,8 @@ nav .bi {
 }
 
 .home-img .profile {
-    width:18.75rem;
-    height:18.75rem;
+    width: 18.75rem;
+    height: 18.75rem;
     margin-bottom: 0.938rem;
     margin-top: 5rem;
 }
@@ -221,14 +221,20 @@ nav .bi {
 }
 
 #btn {
-    background: var(--main-color);
-    border: none;
-    outline: none;
+    text-decoration: none;
     border-radius: 0.438rem;
-    height:2.813rem;
+    border: #647bff;
+    border-color: #647bff;
+    padding-top: 10px;
+    height: 2.813rem;
     width: 10rem;
     color: #fff;
-    margin-bottom: 0.938rem;
+    margin-bottom: 3.5rem;
+}
+
+#btn:hover {
+    background: var(--main-color);
+    transition: 0.3s all linear;
 }
 
 /* End Home */
@@ -236,4 +242,59 @@ nav .bi {
 
 #about {
     background-color: #161616;
+}
+
+
+.heading {
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    color: #272727;
+    text-align: right;
+    font-weight: bold;
+}
+
+.heading2 {
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    color: #272727;
+    text-align: left;
+    font-weight: bold;
+}
+
+.about-content {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.abt {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+div .abme {
+    color: #8f8f8f;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.044rem;
+    align-items: center;
+    text-align: center;
+    margin:auto;
+}
+
+.one-dad {
+    display: flex;
+    justify-content: center;
+}
+
+.one-dad>.two {
+    height: 0.2rem;
+    width: 4.063rem;
+    border-radius: 0.125rem;
+    background: #647bff;
+    opacity: 1;
+    margin-top: -5px;
+    margin-bottom: 0.938rem;
 }
