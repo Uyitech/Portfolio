@@ -220,48 +220,56 @@ nav .bi {
     transition: 0.3s all linear;
 }
 
-#btn {
-    text-decoration: none;
-    border-radius: 0.438rem;
-    border: #647bff;
-    border-color: #647bff;
-    padding-top: 10px;
-    height: 2.813rem;
-    width: 10rem;
-    color: #fff;
-    margin-bottom: 3.5rem;
+.button {
+    /* display: inline-block; */
+    border-radius: 0.350rem;
+    background-color: var(--main-color);
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    padding: 9px 22px;
+    transition: all 0.4s;
+    cursor: pointer;
+    margin-bottom: 2.5rem;
 }
 
-#btn:hover {
-    background: var(--main-color);
-    transition: 0.3s all linear;
+.button span {
+    /* cursor: pointer;
+    display: inline-block;
+    position: relative; */
+    transition: 0.4s;
+}
+
+.button span:after {
+    content: '\00bb';
+    font-size: 20px;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.4s;
+}
+
+.button:hover span {
+    padding-right: 15px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
 }
 
 /* End Home */
 
 
+/* About */
 #about {
     background-color: #161616;
 }
 
-
-.heading {
-    font-size: 4.5rem;
-    text-transform: uppercase;
-    color: #272727;
-    text-align: right;
-    font-weight: bold;
-}
-
-.heading2 {
-    font-size: 4.5rem;
-    text-transform: uppercase;
-    color: #272727;
-    text-align: left;
-    font-weight: bold;
-}
-
 .about-content {
+    margin: auto;
+    width: 53.125rem;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -279,9 +287,10 @@ div .abme {
     font-size: 1.2rem;
     font-weight: 400;
     letter-spacing: 0.044rem;
-    align-items: center;
-    text-align: center;
-    margin:auto;
+}
+
+div .abme .tcolor {
+    color: #647bff;
 }
 
 .one-dad {
@@ -295,6 +304,92 @@ div .abme {
     border-radius: 0.125rem;
     background: #647bff;
     opacity: 1;
-    margin-top: -5px;
+    margin-top: -0.313rem;
     margin-bottom: 0.938rem;
+}
+
+.heading {
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    color: #272727;
+    text-align: right;
+    font-weight: bold;
+}
+
+.heading2 {
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    color: #272727;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* End About */
+
+
+/* Skills */
+#skills {
+    background-color: #202020;
+    margin-top: -8px;
+}
+
+.skills-content {
+    align-items: center;
+    justify-content: center;
+
+}
+
+.ski {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.one-me {
+    display: flex;
+    justify-content: center;
+}
+
+.one-me>.three {
+    height: 0.2rem;
+    width: 4.063rem;
+    border-radius: 0.125rem;
+    background: #647bff;
+    opacity: 1;
+    margin-top: -0.313rem;
+    margin-bottom: 0.938rem;
+}
+
+#skills .progress {
+    height: 50px;
+    display: block;
+    background: none;
+}
+
+#skills .progress .skill {
+    padding: 10px 0;
+    margin: 0;
+    text-transform: uppercase;
+    display: block;
+    font-weight: 600;
+    color: #fff;
+}
+
+#skills .progress .skill .val {
+    float: right;
+    font-size: normal;
+}
+
+#skills .progress-bar-wrap {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#skills .progress-bar {
+    width: 2px;
+    height: 10px;
+    transition: 0.9s;
+    background-color: #647bff;
 }
