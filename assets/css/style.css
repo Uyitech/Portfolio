@@ -17,23 +17,24 @@
     --h2-font: 1.9rem;
     --p-font: 1rem;
 }
-
+/* 
 .container {
     max-width: 60rem;
-    margin: auto;
+    margin-left: 100rem;
     width: 100%;
-}
+} */
 
 /* Header */
-nav {
+/* nav {
     top: 0;
     left: 0;
     width: 100%;
     z-index: 100%;
-}
+} */
 
 #bgcolor {
     background: #161616;
+    
 }
 
 nav .bi {
@@ -41,9 +42,8 @@ nav .bi {
     font-size: 1.8rem;
 }
 
-.container-fluid {
-    padding-left: 5rem !important;
-    padding-right: 5rem;
+#conflu {
+    margin: 0 180px;
 }
 
 #logo {
@@ -51,6 +51,7 @@ nav .bi {
     font-weight: 600;
     width: 2.313rem;
     height: 2.313rem;
+    vertical-align: bottom
 }
 
 .navbar {
@@ -331,12 +332,13 @@ div .abme .tcolor {
 #skills {
     background-color: #202020;
     margin-top: -8px;
+    display: flex;
 }
 
-.skills-content {
-    align-items: center;
-    justify-content: center;
-
+#skills .container-fluid {
+    margin: 0 180px;
+    align-content: center;
+    padding-bottom: 40px;
 }
 
 .ski {
@@ -367,6 +369,7 @@ div .abme .tcolor {
     height: 50px;
     display: block;
     background: none;
+
 }
 
 #skills .progress .skill {
@@ -385,6 +388,7 @@ div .abme .tcolor {
 
 #skills .progress-bar-wrap {
     background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
 }
 
 #skills .progress-bar {
@@ -392,4 +396,6 @@ div .abme .tcolor {
     height: 10px;
     transition: 0.9s;
     background-color: #647bff;
+    border: 10px;
+    border-radius: 10px;
 }
