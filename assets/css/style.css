@@ -107,6 +107,7 @@ h6 {
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
+
 .navbar {
     padding: 0;
 }
@@ -357,7 +358,7 @@ h6 {
 }
 
 .home-text h2::after {
-    content: "Full Stack Developer & UI/UX Designer";
+    content: "Front-end Developer & UI/UX Designer";
     position: absolute;
     -webkit-text-stroke: 0.063rem rgb(255, 255, 255);
     color: transparent;
@@ -609,13 +610,54 @@ div .abme .tcolor {
     margin-bottom: 0.938rem;
 }
 
-section #row1 {
-    background-color: #212121;
-    display: flex;
-    height: 250px;
+section div .text-tit {
+    color: #fff;
+    text-align: center;
 }
 
-section div .text-tit {
+.services .icon-box {
+    box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
+    padding: 50px 30px;
+    transition: all ease-in-out 0.4s;
+    background: #212121;
+    border-radius: 6px;
+    height: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.services .icon-box p {
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
     color: #d2d2d2;
     text-align: center;
+}
+
+.services .bx {
+    font-size: 1.9rem;
+    padding: 0.625rem;
+    border-radius: 50%;
+    color: #fff;
+    background: #353535;
+    margin-top: -0.625rem;
+    margin-bottom: 0.938rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.services .icon-box:hover {
+    transform: translateY(-10px);
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+    border-bottom-color: #647bff;
+}
+
+.services .icon-box:hover h4 {
+    color: #647bff;
+}
+
+.services .icon-box:hover .bx {
+    background: #647bff;
+    transition: 0.3s all linear;
 }
