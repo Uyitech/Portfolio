@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="assets/css/style.css" rel="stylesheet">
-    <link rel="icon" href="assets/img/Logo.png">
+    <link rel="icon" href="assets/img/Logo1.png">
     <title>Portfolio</title>
 
     <!-- Boostrap -->
@@ -29,9 +29,11 @@
 
 <body>
 
+    <!-- Header -->
     <nav class="navbar navbar-expand-lg fixed-top" id="header">
         <div class="container">
-            <img href="#index.html" id="logo" src="assets/img/Logo.png" alt="">
+            <h1 class="title" href="#home">Uyi<span class="tech">tech</span></h1>
+            <!-- <img href="#index.html" id="logo" src="assets/img/Logo.png" alt=""> -->
             <nav id="navbar" class="navbar ms-auto">
                 <ul>
                     <li><a class="nav-link" href="#home">Home</a></li>
@@ -41,11 +43,10 @@
                     <li><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav><!-- .navbar -->
-        </div>
-    </nav><!-- End Header -->
-
-    <!-- Header -->
+            </nav>
+            < </div>
+    </nav>
+    <!-- End Header -->
 
 
     <!-- Section -->
@@ -183,47 +184,206 @@
     <!-- Services -->
     <section id="services" class="services">
         <div class="container" data-aos="fade-up">
-        
+
             <h1 class="ser">Services</h1>
             <div class="one-ser">
                 <hr class="four">
             </div>
-        
+
             <div class="row" id="row1">
                 <div class="col-xl-3 col-md-6 align-items-center" data-aos="zoom-in" data-aos-delay="100">
                     <div class="icon-box">
                         <i class="bx bx-tachometer"></i>
                         <h4 class="text-tit">UI & UX Designing</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor quam gravida integer sagittis egestas.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor quam gravida integer sagittis
+                            egestas.</p>
                     </div>
                 </div>
-        
+
                 <div class="col-xl-3 col-md-6 align-items-center mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
                     <div class="icon-box">
                         <i class="bx bxl-codepen"></i>
                         <h4 class="text-tit">Website Designing</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor quam gravida integer sagittis egestas.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor quam gravida integer sagittis
+                            egestas.</p>
                     </div>
                 </div>
-        
+
                 <div class="col-xl-3 col-md-6 align-items-center mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
                     <div class="icon-box">
                         <i class="bx bxl-dev-to"></i>
                         <h4 class="text-tit">Web Development</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor quam gravida integer sagittis egestas.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor quam gravida integer sagittis
+                            egestas.</p>
                     </div>
                 </div>
-        
+
                 <div class="col-xl-3 col-md-6 align-items-center mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
                     <div class="icon-box">
                         <i class="bx bx-layer"></i>
                         <h4 class="text-tit">Product Designing</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor quam gravida integer sagittis egestas.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor quam gravida integer sagittis
+                            egestas.</p>
                     </div>
                 </div>
-        
+
             </div>
-        
+
+        </div>
+    </section>
+    <!-- End Services -->
+
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+
+            <h1 class="por">Portfolio</h1>
+            <div class="one-por">
+                <hr class="five">
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 d-flex justify-content-center">
+                    <ul id="portfolio-flters">
+                        <li data-filter="*" class="filter-active">All</li>
+                        <li data-filter=".filter-app">App</li>
+                        <li data-filter=".filter-card">Card</li>
+                        <li data-filter=".filter-web">Web</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row portfolio-container">
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                    <div class="portfolio-wrap">
+                        <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>App 1</h4>
+                            <p>App</p>
+                            <div class="portfolio-links">
+                                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery"
+                                    class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                    <div class="portfolio-wrap">
+                        <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Web 3</h4>
+                            <p>Web</p>
+                            <div class="portfolio-links">
+                                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery"
+                                    class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                    <div class="portfolio-wrap">
+                        <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>App 2</h4>
+                            <p>App</p>
+                            <div class="portfolio-links">
+                                <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery"
+                                    class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                    <div class="portfolio-wrap">
+                        <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Card 2</h4>
+                            <p>Card</p>
+                            <div class="portfolio-links">
+                                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery"
+                                    class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                    <div class="portfolio-wrap">
+                        <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Web 2</h4>
+                            <p>Web</p>
+                            <div class="portfolio-links">
+                                <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery"
+                                    class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                    <div class="portfolio-wrap">
+                        <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>App 3</h4>
+                            <p>App</p>
+                            <div class="portfolio-links">
+                                <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery"
+                                    class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                    <div class="portfolio-wrap">
+                        <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Card 1</h4>
+                            <p>Card</p>
+                            <div class="portfolio-links">
+                                <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery"
+                                    class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                    <div class="portfolio-wrap">
+                        <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Card 3</h4>
+                            <p>Card</p>
+                            <div class="portfolio-links">
+                                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery"
+                                    class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                    <div class="portfolio-wrap">
+                        <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Web 3</h4>
+                            <p>Web</p>
+                            <div class="portfolio-links">
+                                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery"
+                                    class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
     </section>
 
@@ -231,10 +391,10 @@
 
 
 
-
-
-
-
+    
+    <!-- Vendor -->
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
     <!-- JS Script -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -243,6 +403,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
+
+    <!-- Js Scripts -->
+    <script src="assets/js/mixitup.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 
