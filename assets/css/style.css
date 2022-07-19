@@ -474,7 +474,6 @@ section div .text-tit {
 }
 
 .services .icon-box {
-    box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
     padding: 50px 30px;
     transition: all ease-in-out 0.4s;
     background: #212121;
@@ -483,6 +482,7 @@ section div .text-tit {
     margin-top: 20px;
     margin-bottom: 40px;
     text-align: center;
+    border-bottom: 3px solid #212121;
 }
 
 .services .icon-box p {
@@ -504,10 +504,8 @@ section div .text-tit {
 }
 
 .services .icon-box:hover {
-    transform: translateY(-10px);
-    border-bottom-style: solid;
-    border-bottom-width: 4px;
-    border-bottom-color: #647bff;
+    transform: translateY(-8px);
+    border-color: #647bff;
 }
 
 .services .icon-box:hover h4 {
@@ -713,3 +711,150 @@ section div .text-tit {
 #contact {
     background-color: #161616;
 }
+
+.con {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.one-con {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.one-con>.six {
+    height: 0.2rem;
+    width: 4.063rem;
+    border-radius: 0.125rem;
+    background: #647bff;
+    opacity: 1;
+    margin-top: -0.313rem;
+    margin-bottom: 0.938rem;
+}
+
+.contact .info {
+    border-top: 3px solid #647bff;
+    border-bottom: 3px solid #647bff;
+    padding: 30px;
+    background: #272727;
+    width: 100%;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1);
+}
+
+.contact .info i {
+    font-size: 20px;
+    color: #647bff;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: #C9CBD4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact .info i a:hover {
+    background: #647bff;
+    color: #fff;
+}
+
+.contact .info .email:hover i,
+.contact .info .address:hover i,
+.contact .info .phone:hover i {
+    background: #647bff;
+    color: #fff;
+}
+
+.contact .info h4 {
+    padding: 0 0 0 60px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.contact .info p {
+    padding: 0 0 10px 60px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 350;
+    color: #DEDEDE;
+}
+
+.contact .info .email p {
+    padding-top: 5px;
+}
+
+/* Text Field */
+.contact .contact-form {
+    width: 100%;
+    border-top: 3px solid #647bff;
+    border-bottom: 3px solid #647bff;
+    padding: 30px;
+    background: #272727;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+}
+
+.contact .contact-form .form-group {
+    padding-bottom: 8px;
+}
+
+.contact .contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact .contact-form label {
+    padding-bottom: 8px;
+    color: #c1c1c1;
+}
+
+.contact .contact-form input,
+.contact .contact-form textarea {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.contact .contact-form input:focus,
+.contact .contact-form textarea:focus {
+    border: 1px solid #647bff;
+    transition: 5ms all linear;
+
+}
+
+.contact .contact-form input {
+    height: 44px;
+    background: #343434;
+    border: none;
+    font-size: medium;
+    color: #fff;
+}
+
+.contact .contact-form textarea {
+    padding: 10px 12px;
+    background: #343434;
+    font-size: medium;
+    border: none;
+    color: #fff;
+}
+
+/* .contact .contact-form[type=submit] {
+    background: #47b2e4;
+    border: 0;
+    padding: 12px 34px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 50px;
+} */
+
+/* .contact .contact-form[type=submit]:hover {
+    background: #209dd8;
+} */
