@@ -59,7 +59,7 @@ nav h1 {
     color: #fff;
     font-size: 2rem;
     font-weight: bold;
-    margin-left: -5px;
+    /* margin-left: -5px; */
 }
 
 nav h1 span {
@@ -1200,7 +1200,6 @@ section div .text-tit {
 /* End Contact */
 
 
-
 /* Footer */
 #copyR {
     background-color: #202020;
@@ -1211,4 +1210,41 @@ section div .text-tit {
     margin: 0;
     color: #8f8f8f;
     font-size: 15px;
+}
+
+/* End Footer */
+
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    transition: all 0.4s;
+    border: none;
+    outline: none;
+    background-color: #647bff;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    margin-bottom: -13px;
+}
+
+#myBtn i {
+    font-size: 24px;
+    color: #fff;
+    line-height: 0;
+    text-align: center;
+}
+
+#myBtn:hover {
+    background-color: #344EE5;
 }
