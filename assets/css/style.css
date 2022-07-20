@@ -805,7 +805,7 @@ section div .text-tit {
 }
 
 .portfolio #portfolio-flters li:hover,
-.portfolio #portfolio-flters li.filter-active {
+.portfolio #portfolio-flters li.active-work {
     background: #647bff;
 }
 

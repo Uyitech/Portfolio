@@ -1,8 +1,3 @@
-
-
-
-
-
 // BACK TO TOP 
 
 //Get the button
@@ -24,3 +19,26 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+
+
+//  MIXITUP PORTFOLIO 
+var mixerPortfolio = mixitup('.portfolio-container', {
+    selectors: {
+        target: '.portfolio-item'
+    },
+    animation: {
+        duration: 300
+    }
+});
+
+// Link Active Work
+
+const linkWork = document.querySelectorAll('.filter')
+
+function activeWork() {
+    linkWork.forEach(l=> l.classList.remove('active-work'))
+    this.classList.add('active-work')
+
+}
+
+linkWork.forEach(l=> l.addEventListener("click", activeWork))
