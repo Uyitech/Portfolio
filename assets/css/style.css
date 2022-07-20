@@ -12,7 +12,7 @@
     --main-color: #647bff;
     --2nd-main-color: #ffffffcc;
     --text-color: #fff;
-    --big-font: 3.8rem;
+    --big-font: 3.2rem;
     --h2-font: 1.9rem;
     --p-font: 1rem;
 }
@@ -100,28 +100,13 @@ nav button.navbar-toggler:focus {
     transition: 0.3s;
 }
 
-.navbar a::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: #647bff;
-    visibility: hidden;
-    width: 0px;
-    transition: all 0.3s ease-in-out 0s;
-}
-
-.navbar a:hover:before,
-.navbar li:hover>a:before,
-.navbar .active:before {
-    visibility: visible;
-    width: 30px;
-}
-
-.navbar a:hover,
-.navbar .active:focus,
-.navbar li:hover>a {
+.navbar a:hover{
     color: #647bff;
+}
+
+.navbar .active>a {
+    color: #647bff;
+    transition: all 0.3s ease-in-out 0s;
 }
 
 /* End Navbar */
@@ -165,12 +150,12 @@ nav button.navbar-toggler:focus {
 
 .home h1 {
     font-size: var(--big-font);
-    font-weight: 700;
+    font-weight: 600;
     color: #fff;
     letter-spacing: 0.063rem;
 }
 
-.home .color {
+.home span {
     color: #647bff;
 }
 
@@ -196,14 +181,14 @@ nav button.navbar-toggler:focus {
     -webkit-text-fill-color: white;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #343434;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 650;
     margin-bottom: 0.938rem;
 }
 
 .home p {
     color: rgba(143, 143, 143, 0.64);
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 400;
     margin-bottom: 1.5rem;
     letter-spacing: 0.4px;
@@ -250,11 +235,11 @@ nav button.navbar-toggler:focus {
 /* MEDIA QUERRIS HOME */
 @media only screen and (max-width: 768px) {
     .home h1 {
-        font-size: 3.2rem;
+        font-size: 3rem;
     }
 
     .full {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     .home-img .profile {
@@ -281,11 +266,11 @@ nav button.navbar-toggler:focus {
 
 @media only screen and (max-width: 425px) {
     .home h1 {
-        font-size: 2.7rem;
+        font-size: 2.6rem;
     }
 
     .full {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
     }
 
     .home-img .profile {
@@ -312,11 +297,11 @@ nav button.navbar-toggler:focus {
 
 @media only screen and (max-width: 375px) {
     .home h1 {
-        font-size: 2.6rem;
+        font-size: 2.5rem;
     }
 
     .full {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 
     .home-img .profile {
@@ -347,7 +332,7 @@ nav button.navbar-toggler:focus {
     }
 
     .full {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     .home-img .profile {

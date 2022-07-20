@@ -1,5 +1,30 @@
-// BACK TO TOP 
+// AUTOTYPED
 
+var typed = new Typed(".color", {
+    strings: ["Uyitech", "Evans Ewansiha"],
+    typeSpeed: 70,
+    backSpeed: 50,
+    loop: true
+});
+
+
+
+// Nav A Menu
+const li = document.querySelectorAll(".nav-item")
+const sec = document.querySelectorAll("section")
+
+function activeMenu() {
+    let len = sec.length;
+    while (--len && window.scrollY + 97 < sec[len].offsetTop) { }
+    li.forEach(ltx => ltx.classList.remove("active"));
+    li[len].classList.add("active");
+}
+activeMenu();
+window.addEventListener("scroll", activeMenu);
+
+
+
+// BACK TO TOP
 //Get the button
 var mybutton = document.getElementById("myBtn");
 
@@ -36,9 +61,9 @@ var mixerPortfolio = mixitup('.portfolio-container', {
 const linkWork = document.querySelectorAll('.filter')
 
 function activeWork() {
-    linkWork.forEach(l=> l.classList.remove('active-work'))
+    linkWork.forEach(l => l.classList.remove('active-work'))
     this.classList.add('active-work')
 
 }
 
-linkWork.forEach(l=> l.addEventListener("click", activeWork))
+linkWork.forEach(l => l.addEventListener("click", activeWork))
