@@ -15,7 +15,7 @@ const sec = document.querySelectorAll("section")
 
 function activeMenu() {
     let len = sec.length;
-    while (--len && window.scrollY + 97 < sec[len].offsetTop) { }
+    while (--len && window.scrollY + 100 < sec[len].offsetTop) { }
     li.forEach(ltx => ltx.classList.remove("active"));
     li[len].classList.add("active");
 }
@@ -32,7 +32,7 @@ var mybutton = document.getElementById("myBtn");
 window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
-    if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         mybutton.style.display = "block";
     } else {
         mybutton.style.display = "none";
@@ -67,3 +67,16 @@ function activeWork() {
 }
 
 linkWork.forEach(l => l.addEventListener("click", activeWork))
+
+
+
+// Animation on scroll
+
+window.addEventListener('load', () => {
+    AOS.init({
+        duration: 1000,
+        easing: "ease-in-out",
+        once: true,
+        mirror: false
+    });
+});
