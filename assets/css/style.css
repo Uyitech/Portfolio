@@ -100,7 +100,7 @@ nav button.navbar-toggler:focus {
     transition: 0.3s;
 }
 
-.navbar a:hover{
+.navbar a:hover {
     color: #647bff;
 }
 
