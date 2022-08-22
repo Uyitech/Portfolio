@@ -356,6 +356,7 @@ nav button.navbar-toggler:focus {
 }
 
 .abt {
+    font-family: 'Rokkitt';
     font-size: 3rem;
     font-weight: bold;
     color: white;
@@ -494,6 +495,7 @@ div .abme .tcolor {
 }
 
 .ski {
+    font-family: 'Rokkitt';
     font-size: 3rem;
     font-weight: bold;
     color: white;
@@ -591,6 +593,7 @@ div .abme .tcolor {
 }
 
 .ser {
+    font-family: 'Rokkitt';
     font-size: 3rem;
     font-weight: bold;
     color: white;
@@ -704,6 +707,7 @@ section div .text-tit {
 }
 
 .por {
+    font-family: 'Rokkitt';
     font-size: 3rem;
     font-weight: bold;
     color: white;
@@ -936,6 +940,7 @@ section div .text-tit {
 }
 
 .con {
+    font-family: 'Rokkitt';
     font-size: 3rem;
     font-weight: bold;
     color: white;
