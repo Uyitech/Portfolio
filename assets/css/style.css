@@ -24,12 +24,6 @@
 }
 
 a {
-    color: #647bff;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #647bff;
     text-decoration: none;
 }
 
@@ -42,79 +36,235 @@ h6 {
     font-family: "Poppins", sans-serif;
 }
 
-/* NAVBAR */
-#header {
-    transition: ease-in-out 0.3s;
-    background-color: #161616;
-    height: auto;
-    z-index: 997;
+/*--------------------------------------------------------------
+# Navbar
+--------------------------------------------------------------*/
+#navBar {
+    overflow: hidden;
+    background-color: #202020;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    box-shadow: 1px 2px 15px rgba(100, 100, 100, 0.3);
+    padding: 15px 10px;
+    transition: 0.4s;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
 }
 
-#header .container {
-    transition: ease-in-out 0.3s;
-    display: flex;
-}
-
-nav h1 {
+#navBar #logo {
     color: #fff;
-    font-size: 2rem;
-    font-weight: bold;
-    /* margin-left: -5px; */
+    font-weight: 600;
+    font-size: 40px;
+    transition: 0.4s;
 }
 
-nav h1 span {
+#navBar #logo:hover {
+    color: #fff;
+}
+
+#navBar #logo span {
     color: #647bff;
 }
 
-
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
-button.navbar-toggler {
-    color: #fff;
-    font-size: 2rem;
+#navBar .nav-item {
+    position: relative;
+    padding-right: 10px;
+    padding-bottom: 8px;
+    margin-left: 0;
 }
 
-nav button.navbar-toggler:focus {
-    text-decoration: none;
+@media (min-width: 768px) {
+    #navBar .nav-item {
+        margin-left: 15px;
+    }
+}
+
+.navbar .nav-link {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    transition: all 0.1s ease-in-out;
+    position: relative;
+}
+
+#navBar .nav-link:before {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    z-index: 0;
+    background-color: #647bff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out 0.3s;
+}
+
+#navBar .nav-link:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+#navBar .show>.nav-link:before,
+#navBar .active>.nav-link:before,
+#navBar .nav-link.show:before,
+#navBar .nav-link.active:before {
+    transform: scaleX(1);
+}
+
+#navBar .nav-link:before {
+    background-color: #647bff;
+}
+
+#navBar .nav-link:hover {
+    color: #fff;
+}
+
+#navBar .show>.nav-link,
+#navBar .active>.nav-link,
+#navBar .nav-link.show,
+#navBar .nav-link.active {
+    color: #fff;
+}
+
+/*------/ Hamburger Navbar /------*/
+.navbar-toggler {
+    position: relative;
+}
+
+nav button.navbar-toggler:focus,
+nav button.navbar-toggler:active {
     outline: none;
     box-shadow: none;
 }
 
-.navbar ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    list-style: none;
-    gap: 30px;
-    margin-right: -10px;
+.navbar-toggler span {
+    display: block;
+    background: white;
+    height: 2px;
+    width: 27px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    transform: rotate(0deg);
+    left: 0;
+    opacity: 1;
 }
 
-.navbar a {
-    padding: 0;
-    font-family: "Poppins", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    color: #c6c6c6;
-    white-space: nowrap;
-    transition: 0.3s;
+.navbar-toggler span:nth-child(1),
+.navbar-toggler span:nth-child(3) {
+    transition: transform 0.35s ease-in-out;
 }
 
-.navbar a:hover {
-    color: #647bff;
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    transform: rotate(135deg);
+    opacity: 0.9;
 }
 
-.navbar .active>a {
-    color: #647bff;
-    transition: all 0.3s ease-in-out 0s;
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+    height: 15px;
+    visibility: hidden;
+    background-color: transparent;
 }
 
-/* End Navbar */
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    transform: rotate(-135deg);
+    opacity: 0.9;
+}
 
 
-/* Home */
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+.section-title {
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 60px;
+}
+
+.section-title h1 {
+    font-family: 'Rokkitt';
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    position: relative;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.section-title h1::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 130px;
+    height: 1px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 60px);
+}
+
+.section-title h1::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #647bff;
+    bottom: 0;
+    left: calc(50% - 20px);
+}
+
+/* MEDIA QUERRIS SKILLS */
+@media only screen and (max-width: 768px) {
+
+    .section-title h1 {
+        font-size: 2.7rem;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+
+    .section-title h1 {
+        font-size: 2.4rem;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+
+    .section-title h1 {
+        font-size: 2.1rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+
+    .section-title h1 {
+        font-size: 1.9rem;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Hero 
+--------------------------------------------------------------*/
 #home {
-    background-color: #202020;
+    background-color: #040404;
+    height: 100vh;
 }
 
 .home-container {
@@ -122,24 +272,35 @@ nav button.navbar-toggler:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 7rem;
 }
 
 .home-img .profile {
-    width: 18.75rem;
-    height: 18.75rem;
+    width: 18rem;
+    height: 18rem;
     margin-bottom: 0.938rem;
-    margin-top: 5rem;
-    text-align: center;
+    margin-top: 8.5rem;
 }
 
-.home {
+.hero .hero-content {
+    text-align: center;
     align-items: center;
     justify-content: center;
+    position: absolute;
+}
+
+.display-table {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+.table-cell {
+    display: table-cell;
+    vertical-align: middle;
     text-align: center;
 }
 
-.home h3 {
+#home h3 {
     font-family: 'Italianno', cursive;
     position: relative;
     align-items: center;
@@ -147,15 +308,15 @@ nav button.navbar-toggler:focus {
     color: #fff;
 }
 
-.home .uyi {
+#home .uyi {
     font-family: 'Rokkitt', serif;
     text-transform: capitalize;
     font-size: 2.8rem;
     font-weight: 600;
     color: #647bff;
     letter-spacing: 0.063rem;
-    margin-top: -10px;
-    margin-bottom: 0.2rem;
+    margin-top: -15px;
+    margin-bottom: -0.5rem;
 }
 
 .full {
@@ -164,13 +325,11 @@ nav button.navbar-toggler:focus {
     color: var(--text-color);
     font-size: 2.5rem;
     font-weight: 600;
-    margin-bottom: 0.6rem;
-    -webkit-text-stroke-color: #343434;
 }
 
-.home p {
+#home p {
     color: rgba(143, 143, 143, 0.64);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 400;
     margin-bottom: 1.5rem;
     letter-spacing: 0.4px;
@@ -339,12 +498,9 @@ nav button.navbar-toggler:focus {
     }
 }
 
-/* End Home */
-
-
 /* About */
 #about {
-    background-color: #161616;
+    background-color: #0D0D0D;
 }
 
 .abme {
@@ -355,32 +511,8 @@ nav button.navbar-toggler:focus {
     text-align: center;
 }
 
-.abt {
-    font-family: 'Rokkitt';
-    font-size: 3rem;
-    font-weight: bold;
-    color: white;
-    text-transform: uppercase;
-    text-align: center;
-}
-
 div .abme .tcolor {
     color: #647bff;
-}
-
-.one-dad {
-    display: flex;
-    justify-content: center;
-}
-
-.one-dad>.two {
-    height: 0.2rem;
-    width: 4.063rem;
-    border-radius: 0.125rem;
-    background: #647bff;
-    opacity: 1;
-    margin-top: -0.313rem;
-    margin-bottom: 0.938rem;
 }
 
 .heading {
@@ -410,10 +542,6 @@ div .abme .tcolor {
         font-size: 4rem;
     }
 
-    .abt {
-        font-size: 2.7rem;
-    }
-
     .abme {
         font-size: 1.05rem;
         font-weight: 400;
@@ -429,10 +557,6 @@ div .abme .tcolor {
 
     .heading2 {
         font-size: 3.5rem;
-    }
-
-    .abt {
-        font-size: 2.4rem;
     }
 
     .abme {
@@ -452,10 +576,6 @@ div .abme .tcolor {
         font-size: 3rem;
     }
 
-    .abt {
-        font-size: 2.1rem;
-    }
-
     .abme {
         font-size: 0.7rem;
         font-weight: 400;
@@ -473,10 +593,6 @@ div .abme .tcolor {
         font-size: 2.5rem;
     }
 
-    .abt {
-        font-size: 1.9rem;
-    }
-
     .abme {
         font-size: 0.6rem;
         font-weight: 400;
@@ -484,39 +600,14 @@ div .abme .tcolor {
     }
 }
 
-/* End About */
-
-
 /* Skills */
 #skills {
-    background-color: #202020;
+    background-color: #040404;
     margin-top: -8px;
-    padding-bottom: 40px;
 }
 
-.ski {
-    font-family: 'Rokkitt';
-    font-size: 3rem;
-    font-weight: bold;
-    color: white;
-    text-transform: uppercase;
-    text-align: center;
-    padding-top: 40px;
-}
-
-.one-me {
-    display: flex;
-    justify-content: center;
-}
-
-.one-me>.three {
-    height: 0.2rem;
-    width: 4.063rem;
-    border-radius: 0.125rem;
-    background: #647bff;
-    opacity: 1;
-    margin-top: -0.313rem;
-    margin-bottom: 0.938rem;
+.skills {
+    padding-bottom: 60px;
 }
 
 #skills .progress {
@@ -553,68 +644,14 @@ div .abme .tcolor {
     border-radius: 10px;
 }
 
-/* MEDIA QUERRIS SKILLS */
-@media only screen and (max-width: 768px) {
-
-    .ski {
-        font-size: 2.7rem;
-    }
-}
-
-@media only screen and (max-width: 425px) {
-
-    .ski {
-        font-size: 2.4rem;
-    }
-}
-
-@media only screen and (max-width: 375px) {
-
-    .ski {
-        font-size: 2.1rem;
-    }
-}
-
-@media only screen and (max-width: 320px) {
-
-    .ski {
-        font-size: 1.9rem;
-    }
-}
-
-/* End Skills */
-
-
 
 /* Services */
 #services {
-    background-color: #161616;
-    padding-bottom: 50px;
+    background-color: #0D0D0D;
 }
 
-.ser {
-    font-family: 'Rokkitt';
-    font-size: 3rem;
-    font-weight: bold;
-    color: white;
-    text-transform: uppercase;
-    text-align: center;
-    padding-top: 40px;
-}
-
-.one-ser {
-    display: flex;
-    justify-content: center;
-}
-
-.one-ser>.four {
-    height: 0.2rem;
-    width: 4.063rem;
-    border-radius: 0.125rem;
-    background: #647bff;
-    opacity: 1;
-    margin-top: -0.313rem;
-    margin-bottom: 0.938rem;
+.services {
+    padding-bottom: 60px;
 }
 
 section div .text-tit {
@@ -668,68 +705,20 @@ section div .text-tit {
 /* MEDIA QUERRIS SERVICES */
 @media only screen and (max-width: 768px) {
 
-    .ser {
-        font-size: 2.7rem;
-    }
-
     .services .icon-box {
         margin-bottom: -10px;
     }
 }
 
-@media only screen and (max-width: 425px) {
-
-    .ser {
-        font-size: 2.4rem;
-    }
-}
-
-@media only screen and (max-width: 375px) {
-
-    .ser {
-        font-size: 2.1rem;
-    }
-}
-
-@media only screen and (max-width: 320px) {
-
-    .ser {
-        font-size: 1.9rem;
-    }
-}
-
-/* End Sevices */
-
-
 /* Portfolio */
 #portfolio {
-    background-color: #202020;
+    background-color: #040404;
 }
 
-.por {
-    font-family: 'Rokkitt';
-    font-size: 3rem;
-    font-weight: bold;
-    color: white;
-    text-transform: uppercase;
-    text-align: center;
-    padding-top: 40px;
+.portfolio {
+    padding-bottom: 40px;
 }
 
-.one-por {
-    display: flex;
-    justify-content: center;
-}
-
-.one-por>.five {
-    height: 0.2rem;
-    width: 4.063rem;
-    border-radius: 0.125rem;
-    background: #647bff;
-    opacity: 1;
-    margin-top: -0.313rem;
-    margin-bottom: 0.938rem;
-}
 
 .portfolio .portfolio-item {
     margin-bottom: 30px;
@@ -887,18 +876,7 @@ section div .text-tit {
 }
 
 /* MEDIA QUERRIS PORTFOLIO */
-@media only screen and (max-width: 768px) {
-
-    .por {
-        font-size: 2.7rem;
-    }
-}
-
 @media only screen and (max-width: 425px) {
-
-    .por {
-        font-size: 2.4rem;
-    }
 
     .portfolio #portfolio-flters li {
         padding: 8px 16px 10px 16px;
@@ -908,10 +886,6 @@ section div .text-tit {
 
 @media only screen and (max-width: 375px) {
 
-    .por {
-        font-size: 2.1rem;
-    }
-
     .portfolio #portfolio-flters li {
         padding: 8px 16px 10px 16px;
         font-size: 13px;
@@ -919,10 +893,6 @@ section div .text-tit {
 }
 
 @media only screen and (max-width: 320px) {
-
-    .por {
-        font-size: 1.9rem;
-    }
 
     .portfolio #portfolio-flters li {
         padding: 8px 16px 10px 16px;
@@ -935,34 +905,11 @@ section div .text-tit {
 
 /* Contact form */
 #contact {
-    background-color: #161616;
-    padding-bottom: 50px;
+    background-color: #0D0D0D;
 }
 
-.con {
-    font-family: 'Rokkitt';
-    font-size: 3rem;
-    font-weight: bold;
-    color: white;
-    text-transform: uppercase;
-    text-align: center;
-    padding-top: 40px;
-}
-
-.one-con {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.one-con>.six {
-    height: 0.2rem;
-    width: 4.063rem;
-    border-radius: 0.125rem;
-    background: #647bff;
-    opacity: 1;
-    margin-top: -0.313rem;
-    margin-bottom: 0.938rem;
+.contact {
+    padding-bottom: 60px;
 }
 
 .contact .info {
@@ -1095,10 +1042,6 @@ section div .text-tit {
 /* MEDIA QUERRIS CONTACT */
 @media only screen and (max-width: 768px) {
 
-    .con {
-        font-size: 2.7rem;
-    }
-
     .button {
         border-radius: 0.330rem;
         font-size: 15px;
@@ -1109,10 +1052,6 @@ section div .text-tit {
 }
 
 @media only screen and (max-width: 425px) {
-
-    .con {
-        font-size: 2.4rem;
-    }
 
     .button {
         border-radius: 0.310rem;
@@ -1125,10 +1064,6 @@ section div .text-tit {
 
 @media only screen and (max-width: 375px) {
 
-    .con {
-        font-size: 2.1rem;
-    }
-
     .button {
         border-radius: 0.300rem;
         font-size: 13px;
@@ -1139,10 +1074,6 @@ section div .text-tit {
 }
 
 @media only screen and (max-width: 320px) {
-
-    .con {
-        font-size: 1.9rem;
-    }
 
     .button {
         border-radius: 0.290rem;
@@ -1158,7 +1089,7 @@ section div .text-tit {
 
 /* Footer */
 #copyR {
-    background-color: #202020;
+    background-color: #040404;
     padding: 20px;
 }
 
@@ -1167,8 +1098,6 @@ section div .text-tit {
     color: #8f8f8f;
     font-size: 15px;
 }
-
-/* End Footer */
 
 
 /*--------------------------------------------------------------
@@ -1180,18 +1109,15 @@ section div .text-tit {
     bottom: 20px;
     right: 30px;
     z-index: 99;
-    font-size: 18px;
     width: 40px;
     height: 40px;
-    border-radius: 50px;
-    /* transition: all 0.4s ease-in-out; */
-    transition: width 2s, height 4s;
+    border-radius: 50%;
+    transition: 0.4s;
     border: none;
     outline: none;
     background-color: #647bff;
     color: white;
     cursor: pointer;
-    /* padding: 15px; */
     margin-bottom: -13px;
 }
 
