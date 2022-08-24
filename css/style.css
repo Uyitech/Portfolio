@@ -605,6 +605,7 @@ div .abme .tcolor {
     color: var(--heading-text);
     text-align: right;
     font-weight: bold;
+    margin-bottom: -84px;
 }
 
 .heading2 {
@@ -613,6 +614,7 @@ div .abme .tcolor {
     color: var(--heading-text);
     text-align: left;
     font-weight: bold;
+    padding-bottom: 10px;
 }
 
 /* MEDIA QUERRIS ABOUT */

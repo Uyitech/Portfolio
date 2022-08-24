@@ -18,6 +18,17 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
 }
 
+// Toggle Dark and Light mode
+const sun = document.getElementById("sun")
+
+sun.onclick = function () {
+    document.body.classList.toggle("light");
+    if (document.body.classList.contains("light")) {
+        sun.src = "img/sun.png";
+    } else {
+        sun.src = "img/moon.png";
+    }
+}
 
 // AUTOTYPE
 var typed = new Typed(".color", {
