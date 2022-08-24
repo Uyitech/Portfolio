@@ -26,6 +26,7 @@
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
 </head>
 
@@ -33,7 +34,8 @@
     <!-- ======= Navbar ======= -->
     <nav id="navBar" class="navbar navbar-default navbar-expand-lg">
         <div class="container">
-            <a id="logo" class="navbar-brand title" href="#home">Uyi<span class="tech">Tech</span></a>
+            <a id="logo" class="navbar-brand title animate__animated animate__fadeInLeft" href="#home">Uyi<span
+                    class="tech">Tech</span></a>
             <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -41,7 +43,7 @@
                 <span></span>
                 <span></span>
             </button>
-            <div class="navbar-collapse collapse" id="navbarDefault">
+            <div class="navbar-collapse collapse animate__animated animate__fadeInRight" id="navbarDefault">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item active"><a class="nav-link scrollTo" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link scrollTo" href="#about">About</a></li>
@@ -49,6 +51,7 @@
                     <li class="nav-item"><a class="nav-link scrollTo" href="#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link scrollTo" href="#portfolio">Portfolio</a></li>
                     <li class="nav-item"><a class="nav-link scrollTo" href="#contact">Contact</a></li>
+                    <img src="assets/img/moon.png" alt="" id="sun">
                 </ul>
             </div>
         </div>
@@ -63,22 +66,23 @@
                 <div class="home-img">
                     <img class="profile" src="assets/img/Pictu.png" alt="">
                 </div>
-                <h3>Hello I'm</h3>
-                <h1 class="uyi">Evans Ewansiha</h1>
-                <h2 class="full">I'm A <span class="color"></span></h2>
-                <p>Front-end developer focused on creating Web & Mobile<br> applications. I really like
-                    different
-                    projects that solve<br> real problems.
+                <h3 class="animate__animated animate__fadeInDown">Hello I'm</h3>
+                <h1 class="uyi animate__animated animate__fadeInDown">Evans Ewansiha</h1>
+                <h2 class="full animate__animated animate__fadeInDown">I'm A <span class="color"></span></h2>
+                <p class="animate__animated animate__fadeInUp">Front-end developer focused on creating Web & Mobile<br>
+                    applications. I really like
+                    different projects that solve<br> real problems.
                 </p>
                 <!-- Social icons -->
-                <div class="social">
+                <div class="social animate__animated animate__fadeInUp">
                     <a href="https://www.linkedin.com/in/evans-ewansiha/"><i class="bx bxl-linkedin"></i></a>
                     <a href="https://twitter.com/uyitech1"><i class="bx bxl-twitter"></i></a>
                     <a href="https://github.com/Uyitech"><i class="bx bxl-github"></i></a>
                     <a href="https://www.instagram.com/uyitech1"><i class="bx bxl-instagram"></i></a>
                     <a href="https://wa.link/yriu37"><i class="bx bxl-whatsapp"></i></a>
                 </div>
-                <button href="#" class="button"><i class="fa fa-download"></i> Download CV</button>
+                <button href="#" class="button animate__animated animate__fadeInUp"><i class="fa fa-download"></i>
+                    Download CV</button>
             </div>
         </div>
     </section>
@@ -115,7 +119,7 @@
         <div class="container" data-aos="zoom-in">
             <div class="row skills-content">
                 <div class="section-title">
-                    <h1>Skills</h1>
+                    <h1>My Skills</h1>
                 </div>
 
                 <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
@@ -278,7 +282,8 @@
                             <p>Web</p>
                             <div class="portfolio-links">
                                 <a href="assets/img/portfolio/Whatsapp.png" data-gallery="portfolioGallery"
-                                    class="portfolio-lightbox" title="WWhatsapp Web Clone"><i class="bx bx-plus"></i></a>
+                                    class="portfolio-lightbox" title="WWhatsapp Web Clone"><i
+                                        class="bx bx-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -391,7 +396,7 @@
     <section id="contact" class="contact">
         <div class="container" data-aos="fade-up">
             <div class="section-title">
-                <h1>Contact</h1>
+                <h1>Contact Me</h1>
             </div>
             <div class="row">
                 <div class="col-lg-5 d-flex align-items-stretch">
@@ -482,16 +487,14 @@
     <script src="assets/js/app.js"></script>
 
     <script>
-        // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
-        window.onscroll = function () { scrollFunction() };
+        const sun = document.getElementById("sun")
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                document.getElementById("navBar").style.padding = "10px 10px";
-                document.getElementById("logo").style.fontSize = "30px";
+        sun.onclick = function () {
+            document.body.classList.toggle("light");
+            if (document.body.classList.contains("light")) {
+                sun.src = "assets/img/sun.png";
             } else {
-                document.getElementById("navBar").style.padding = "15px 10px";
-                document.getElementById("logo").style.fontSize = "40px";
+                sun.src = "assets/img/moon.png";
             }
         }
     </script>
