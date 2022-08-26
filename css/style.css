@@ -16,6 +16,48 @@ html {
 
 :root {
     --main-color: #344ee5;
+    --navbar: #202020;
+    --box-shadow-navbar: rgba(100, 100, 100, 0.3);
+    --logo-other: #fff;
+    --section-title: #ffffff;
+    --h1-before: #ddd;
+    --h-s-p: #040404;
+    --A-S-C: #0D0D0D;
+    --full-text: #fff;
+    --home-p: rgba(143, 143, 143, 0.64);
+    --home-h3: #fff;
+    --bx-icon: #fff;
+    --bx: #353535;
+    --hover: #647bff;
+    --abt-foot: #8f8f8f;
+    --heading-text: #272727;
+    --progress-text: #fff;
+    --progress-bar: rgba(255, 255, 255, 0.2);
+    --services-head: #fff;
+    --services-icon-box: #fff;
+    --services-box: #212121;
+    --services-p: #d2d2d2;
+    --services-bx: #fff;
+    --services-box-hover: #212121;
+    --port-li: #fff;
+    --port-li-bx: rgba(255, 255, 255, 0.1);
+    --port-wrap: rgba(0, 0, 0, 0.6);
+    --port-wrap-items: #fff;
+    --port-wrap-line: #fff;
+    --contact-bg: #272727;
+    --contact-shadow: rgba(0, 0, 0, 0.1);
+    --contact-icon: #C9CBD4;
+    --contact-icon-hover: #fff;
+    --contact-info-h4: #fff;
+    --contact-info-p: #DEDEDE;
+    --contact-label: #c1c1c1;
+    --contact-input: #343434;
+    --contact-input-placeholder: #fff;
+    --my-btn: #fff;
+}
+
+.light {
+    --main-color: #344ee5;
     --navbar: #fff;
     --box-shadow-navbar: rgba(100, 100, 100, 0.3);
     --logo-other: #000000;
@@ -56,47 +98,6 @@ html {
     --my-btn: #fff;
 }
 
-.light {
-    --main-color: #344ee5;
-    --navbar: #202020;
-    --box-shadow-navbar: rgba(100, 100, 100, 0.3);
-    --logo-other: #fff;
-    --section-title: #ffffff;
-    --h1-before: #ddd;
-    --h-s-p: #040404;
-    --A-S-C: #0D0D0D;
-    --full-text: #fff;
-    --home-p: rgba(143, 143, 143, 0.64);
-    --home-h3: #fff;
-    --bx-icon: #fff;
-    --bx: #353535;
-    --hover: #647bff;
-    --abt-foot: #8f8f8f;
-    --heading-text: #272727;
-    --progress-text: #fff;
-    --progress-bar: rgba(255, 255, 255, 0.2);
-    --services-head: #fff;
-    --services-icon-box: #fff;
-    --services-box: #212121;
-    --services-p: #d2d2d2;
-    --services-bx: #fff;
-    --services-box-hover: #212121;
-    --port-li: #fff;
-    --port-li-bx: rgba(255, 255, 255, 0.1);
-    --port-wrap: rgba(0, 0, 0, 0.6);
-    --port-wrap-items: #fff;
-    --port-wrap-line: #fff;
-    --contact-bg: #272727;
-    --contact-shadow: rgba(0, 0, 0, 0.1);
-    --contact-icon: #C9CBD4;
-    --contact-icon-hover: #fff;
-    --contact-info-h4: #fff;
-    --contact-info-p: #DEDEDE;
-    --contact-label: #c1c1c1;
-    --contact-input: #343434;
-    --contact-input-placeholder: #fff;
-    --my-btn: #fff;
-}
 
 .animate__animated {
     --animate-duration: 1.5s;
@@ -186,7 +187,7 @@ h6 {
     color: var(--logo-other);
     font-weight: 400;
     letter-spacing: 0.03em;
-    transition: all 0.1s ease-in-out;
+    transition: all 0.3s;
     position: relative;
 }
 
@@ -446,6 +447,7 @@ nav button.navbar-toggler:active {
     border-radius: 50%;
     color: var(--services-bx);
     border: 1.5px solid var(--bx);
+    transition: 0.3s all linear;
 }
 
 .social .bx:hover {
@@ -461,6 +463,7 @@ nav button.navbar-toggler:active {
     border: none;
     color: var(--bx-icon);
     text-align: center;
+    align-items: center;
     height: 45px;
     width: 165px;
     transition: all 0.4s;
@@ -595,7 +598,7 @@ nav button.navbar-toggler:active {
     color: var(--abt-foot);
     font-size: 1.2rem;
     font-weight: 400;
-    letter-spacing: 0.030rem;
+    0 letter-spacing: 0.030rem;
     text-align: center;
 }
 
@@ -1062,12 +1065,14 @@ section div .text-tit {
     padding: 0 0 10px 60px;
     margin-bottom: 20px;
     font-size: 14px;
-    font-weight: 350;
+    font-weight: 400;
     color: var(--contact-info-p);
+    word-break: break-all;
+    cursor: pointer;
 }
 
-.contact .info .email p {
-    padding-top: 5px;
+.contact .info p:hover {
+    color: var(--contact-info-p);
 }
 
 /* Text Field */
@@ -1103,9 +1108,8 @@ section div .text-tit {
 
 .contact .contact-form input:focus,
 .contact .contact-form textarea:focus {
-    border: 1px solid var(--main-color);
+    border: 0.7px solid var(--main-color);
     transition: 5ms all linear;
-
 }
 
 .contact .contact-form input {

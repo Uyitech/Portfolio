@@ -1,37 +1,32 @@
-// // BACK TO TOP
-// //Get the button
-const mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () { scrollFunction() };
-
-function scrollFunction() {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
-}
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
-
 // Toggle Dark and Light mode
 const sun = document.getElementById("sun")
 
 sun.onclick = function () {
     document.body.classList.toggle("light");
     if (document.body.classList.contains("light")) {
-        sun.src = "img/sun.png";
-    } else {
         sun.src = "img/moon.png";
+    } else {
+        sun.src = "img/sun.png";
     }
 }
 
+
+//  Animation on scroll
+ScrollReveal({
+    distance: '70px',
+    duration: 2000
+});
+
+ScrollReveal().reveal('.ani', { delay: 300, origin: 'left' });
+ScrollReveal().reveal('.pani', { delay: 500, origin: 'bottom' });
+ScrollReveal().reveal('.cani', { delay: 400, origin: 'bottom' });
+ScrollReveal().reveal('.sleft', { delay: 400, origin: 'bottom' });
+ScrollReveal().reveal('.sright', { delay: 400, origin: 'bottom' });
+ScrollReveal().reveal('.section-title', { delay: 400, origin: 'bottom' });
+
+
 // AUTOTYPE
-var typed = new Typed(".color", {
+const typed = new Typed(".color", {
     strings: ["Front-end Developer", "UI/UX Designer"],
     typeSpeed: 70,
     backSpeed: 50,
@@ -74,3 +69,24 @@ function activeWork() {
 }
 
 linkWork.forEach(l => l.addEventListener("click", activeWork))
+
+
+// // BACK TO TOP
+// //Get the button
+const mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
