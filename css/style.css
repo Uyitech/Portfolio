@@ -364,25 +364,14 @@ nav button.navbar-toggler:active {
     height: 100vh;
 }
 
-.home-container {
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#home .container {
+    padding-top: 100px;
+    padding-top: 100px;
 }
 
-.home-img .profile {
-    width: 18rem;
-    height: 18rem;
-    margin-bottom: 0.938rem;
-    margin-top: 6.5rem;
-}
-
-.hero .hero-content {
-    text-align: left;
-    align-items: left;
-    justify-content: left;
-    position: absolute;
+.profile {
+    width: 33rem;
+    height: 33rem;
 }
 
 .display-table {
@@ -394,7 +383,7 @@ nav button.navbar-toggler:active {
 .table-cell {
     display: table-cell;
     vertical-align: middle;
-    text-align: left;
+    padding-bottom: 50px;
 }
 
 #home h3 {
@@ -431,7 +420,6 @@ nav button.navbar-toggler:active {
     font-weight: 400;
     margin-bottom: 1.5rem;
     letter-spacing: 0.4px;
-    text-align: left;
 }
 
 .social {
@@ -475,35 +463,100 @@ nav button.navbar-toggler:active {
     background: var(--hover);
 }
 
+#home .row {
+    --bs-gutter-x: 4.5rem;
+}
+
 /* MEDIA QUERRIS HOME */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 990px) {
+    #home .row {
+        --bs-gutter-x: 1.5rem;
+    }
+
+    #home .hero-img {
+        margin-top: -40px;
+        text-align: center;
+    }
+
     #home .uyi {
         font-size: 2.3rem;
+        text-align: center;
     }
 
-    .full {
+    #home h3 {
+        text-align: center;
+    }
+
+    #home .full {
         font-size: 2.3rem;
+        text-align: center;
     }
 
-    .home-img .profile {
-        width: 17.813rem;
-        height: 17.813rem;
+    #home .profile {
+        width: 20rem;
+        height: 20rem;
+        margin-top: 50px;
+        text-align: center;
+        align-items: center;
     }
 
-    .home p {
+    #home p {
         font-size: 1.1rem;
+        text-align: center;
+        align-items: center;
     }
 
-    .social .bx {
+    #home .social {
         font-size: 1.3rem;
+        text-align: center;
     }
 
-    .button {
+    #home button {
         border-radius: 0.330rem;
         font-size: 14px;
         height: 40px;
         width: 160px;
         text-align: center;
+        align-items: center;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #home .uyi {
+        font-size: 2.3rem;
+        text-align: center;
+    }
+
+    .full {
+        font-size: 2.3rem;
+        text-align: center;
+    }
+
+    #home .profile {
+        width: 18rem;
+        height: 18rem;
+        text-align: center;
+        align-items: center;
+    }
+
+    #home p {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    #home .social {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    #home button {
+        border-radius: 0.330rem;
+        font-size: 14px;
+        height: 40px;
+        width: 160px;
+        text-align: center;
+        align-items: center;
     }
 }
 
@@ -516,9 +569,11 @@ nav button.navbar-toggler:active {
         font-size: 1.6rem;
     }
 
-    .home-img .profile {
+    .profile {
         width: 16.875rem;
         height: 16.875rem;
+        text-align: center;
+        align-items: center;
     }
 
     .home p {
@@ -539,9 +594,11 @@ nav button.navbar-toggler:active {
         font-size: 1.5rem;
     }
 
-    .home-img .profile {
+    .profile {
         width: 16.875rem;
         height: 16.875rem;
+        text-align: center;
+        align-items: center;
     }
 
     .home p {
@@ -567,9 +624,11 @@ nav button.navbar-toggler:active {
         font-size: 1.4rem;
     }
 
-    .home-img .profile {
+    .profile {
         width: 16.25rem;
         height: 16.25rem;
+        text-align: center;
+        align-items: center;
     }
 
     .home p {
