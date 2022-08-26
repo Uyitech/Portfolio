@@ -379,9 +379,9 @@ nav button.navbar-toggler:active {
 }
 
 .hero .hero-content {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+    text-align: left;
+    align-items: left;
+    justify-content: left;
     position: absolute;
 }
 
@@ -394,7 +394,7 @@ nav button.navbar-toggler:active {
 .table-cell {
     display: table-cell;
     vertical-align: middle;
-    text-align: center;
+    text-align: left;
 }
 
 #home h3 {
@@ -431,7 +431,7 @@ nav button.navbar-toggler:active {
     font-weight: 400;
     margin-bottom: 1.5rem;
     letter-spacing: 0.4px;
-    text-align: center;
+    text-align: left;
 }
 
 .social {
