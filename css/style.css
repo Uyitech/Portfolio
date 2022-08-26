@@ -117,15 +117,6 @@ a {
     text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Poppins", sans-serif;
-}
-
 /*--------------------------------------------------------------
 # Navbar
 --------------------------------------------------------------*/
@@ -657,7 +648,7 @@ nav button.navbar-toggler:active {
     color: var(--abt-foot);
     font-size: 1.2rem;
     font-weight: 400;
-    0 letter-spacing: 0.030rem;
+    letter-spacing: 0.030rem;
     text-align: center;
 }
 
