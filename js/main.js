@@ -10,6 +10,7 @@ sun.onclick = function () {
     }
 }
 
+
 // AUTOTYPE
 const typed = new Typed(".color", {
     strings: ["Front-end Developer", "UI/UX Designer"],
@@ -42,9 +43,7 @@ const mixerPortfolio = mixitup('.portfolio-container', {
         duration: 300
     }
 });
-
 // Link Active Work
-
 const linkWork = document.querySelectorAll('.filter')
 
 function activeWork() {
@@ -56,27 +55,7 @@ function activeWork() {
 linkWork.forEach(l => l.addEventListener("click", activeWork))
 
 
-// // BACK TO TOP
-// //Get the button
-const mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () { scrollFunction() };
-
-function scrollFunction() {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
-}
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
-
-
+// Animation
 AOS.init();
 
 // You can also pass an optional settings object
@@ -91,3 +70,56 @@ AOS.init({
     mirror: false, // whether elements should animate out while scrolling past them
 
 });
+
+
+// Back to Top
+$(document).ready(function () {
+    const progressPath = document.querySelector('.progress-wrap path');
+    const pathLength = progressPath.getTotalLength();
+
+    progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+    progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+    progressPath.style.strokeDashoffset = pathLength;
+    progressPath.getBoundingClientRect();
+    progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
+
+    const updateProgress = function () {
+        const scroll = $(window).scrollTop();
+        const height = $(document).height() - $(window).height();
+        const progress = pathLength - (scroll * pathLength / height);
+        progressPath.style.strokeDashoffset = progress;
+    }
+
+    updateProgress();
+    $(window).scroll(updateProgress);
+
+    const offset = 50;
+    const duration = 10;
+
+    jQuery(window).on('scroll', function () {
+        if (jQuery(this).scrollTop() > offset) {
+            jQuery('.progress-wrap').addClass('active-progress');
+        } else {
+            jQuery('.progress-wrap').removeClass('active-progress');
+        }
+    });
+
+    jQuery('.progress-wrap').on('click', function (event) {
+        event.preventDefault();
+        jQuery('html, body').animate({ scrollTop: 0 }, duration);
+        return false;
+    })
+});
+
+
+// Start of Tawk.to Script
+var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+(function () {
+    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+    s1.async = true;
+    s1.src = 'https://embed.tawk.to/6308df1e37898912e9655e3d/1gbdaf443';
+    s1.charset = 'UTF-8';
+    s1.setAttribute('crossorigin', '*');
+    s0.parentNode.insertBefore(s1, s0);
+})();
+// End of Tawk.to Script
