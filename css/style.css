@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap');
 
-/* GENERAL */
+/*--------------------------------------------------------------
+# The Start
+--------------------------------------------------------------*/
 * {
     margin: 0;
     padding: 0;
@@ -117,6 +119,7 @@ a {
     text-decoration: none;
 }
 
+
 /*--------------------------------------------------------------
 # Navbar
 --------------------------------------------------------------*/
@@ -138,7 +141,7 @@ a {
 #navBar #logo {
     color: var(--logo-other);
     font-weight: 600;
-    font-size: 40px;
+    font-size: 35px;
     transition: 0.4s;
 }
 
@@ -223,7 +226,9 @@ a {
     color: var(--logo-other);
 }
 
-/*------/ Hamburger Navbar /------*/
+/*--------------------------------------------------------------
+# Hamburger Menu
+--------------------------------------------------------------*/
 .navbar-toggler {
     position: relative;
 }
@@ -273,82 +278,30 @@ nav button.navbar-toggler:active {
     opacity: 0.9;
 }
 
-
 /*--------------------------------------------------------------
-# Sections General
+# Media Queries Navbar
 --------------------------------------------------------------*/
-.section-title {
-    text-align: center;
-    padding-bottom: 20px;
-    padding-top: 60px;
-}
-
-.section-title h1 {
-    font-family: 'Rokkitt';
-    font-size: 2.8rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding-bottom: 5px;
-    position: relative;
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
-    color: var(--section-title);
-}
-
-.section-title h1::before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 130px;
-    height: 1px;
-    background: var(--h1-before);
-    bottom: 1px;
-    left: calc(50% - 60px);
-}
-
-.section-title h1::after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 50px;
-    height: 3px;
-    background: var(--main-color);
-    bottom: 0;
-    left: calc(50% - 20px);
-}
-
-/* MEDIA QUERRIS SKILLS */
-@media only screen and (max-width: 768px) {
-
-    .section-title h1 {
-        font-size: 2.7rem;
-    }
-}
-
-@media only screen and (max-width: 425px) {
-
-    .section-title h1 {
-        font-size: 2.4rem;
+@media only screen and (max-width: 500px) {
+    #navBar #logo {
+        color: var(--logo-other);
+        font-weight: 600;
+        font-size: 30px;
+        transition: 0.4s;
     }
 }
 
 @media only screen and (max-width: 375px) {
-
-    .section-title h1 {
-        font-size: 2.1rem;
-    }
-}
-
-@media only screen and (max-width: 320px) {
-
-    .section-title h1 {
-        font-size: 1.9rem;
+    #navBar #logo {
+        color: var(--logo-other);
+        font-weight: 600;
+        font-size: 25px;
+        transition: 0.4s;
     }
 }
 
 
 /*--------------------------------------------------------------
-# Hero 
+# Home 
 --------------------------------------------------------------*/
 #home {
     background: var(--h-s-p);
@@ -458,7 +411,9 @@ nav button.navbar-toggler:active {
     --bs-gutter-x: 4.5rem;
 }
 
-/* MEDIA QUERRIS HOME */
+/*--------------------------------------------------------------
+# Media Queries Home
+--------------------------------------------------------------*/
 @media only screen and (max-width: 990px) {
     #home .row {
         --bs-gutter-x: 1.5rem;
@@ -470,7 +425,6 @@ nav button.navbar-toggler:active {
     }
 
     #home .uyi {
-        font-size: 2.3rem;
         text-align: center;
     }
 
@@ -479,7 +433,6 @@ nav button.navbar-toggler:active {
     }
 
     #home .full {
-        font-size: 2.3rem;
         text-align: center;
     }
 
@@ -492,13 +445,11 @@ nav button.navbar-toggler:active {
     }
 
     #home p {
-        font-size: 1.1rem;
         text-align: center;
         align-items: center;
     }
 
     #home .social {
-        font-size: 1.3rem;
         text-align: center;
     }
 
@@ -519,7 +470,7 @@ nav button.navbar-toggler:active {
         text-align: center;
     }
 
-    .full {
+    #home .full {
         font-size: 2.3rem;
         text-align: center;
     }
@@ -556,51 +507,44 @@ nav button.navbar-toggler:active {
         font-size: 2.2rem;
     }
 
-    .full {
+    #home .full {
         font-size: 1.6rem;
     }
 
-    .profile {
-        width: 16.875rem;
-        height: 16.875rem;
+    #home .profile {
+        width: 17rem;
+        height: 17rem;
         text-align: center;
         align-items: center;
     }
 
-    .home p {
-        font-size: 1rem;
+    #home p {
+        font-size: 0.8rem;
     }
 
-    .social .bx {
+    #home .social .bx {
         font-size: 1.3rem;
     }
 }
 
 @media only screen and (max-width: 375px) {
     #home .uyi {
-        font-size: 2.1rem;
+        font-size: 2.2rem;
     }
 
-    .full {
+    #home .full {
         font-size: 1.5rem;
     }
 
-    .profile {
-        width: 16.875rem;
-        height: 16.875rem;
-        text-align: center;
-        align-items: center;
-    }
-
-    .home p {
+    #home p {
         font-size: 0.7rem;
     }
 
-    .social .bx {
+    #home .social .bx {
         font-size: 1.2rem;
     }
 
-    .button {
+    #home button {
         border-radius: 0.300rem;
         font-size: 13px;
     }
@@ -611,35 +555,103 @@ nav button.navbar-toggler:active {
         font-size: 2rem;
     }
 
-    .full {
+    #home .full {
         font-size: 1.4rem;
     }
 
-    .profile {
-        width: 16.25rem;
-        height: 16.25rem;
-        text-align: center;
-        align-items: center;
+    #home p {
+        font-size: 0.7rem;
     }
 
-    .home p {
-        font-size: 0.6rem;
+    #home .social .bx {
+        font-size: 1.2rem;
     }
 
-    .social .bx {
-        font-size: 1rem;
-    }
-
-    .button {
+    #home button {
         border-radius: 0.290rem;
         font-size: 13px;
-        height: 37px;
-        width: 140px;
-        text-align: center;
     }
 }
 
-/* About */
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+.section-title {
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 60px;
+}
+
+.section-title h1 {
+    font-family: 'Rokkitt';
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    position: relative;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--section-title);
+}
+
+.section-title h1::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 130px;
+    height: 1px;
+    background: var(--h1-before);
+    bottom: 1px;
+    left: calc(50% - 60px);
+}
+
+.section-title h1::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--main-color);
+    bottom: 0;
+    left: calc(50% - 20px);
+}
+
+/*--------------------------------------------------------------
+# Media Queries Section
+--------------------------------------------------------------*/
+@media only screen and (max-width: 768px) {
+
+    .section-title h1 {
+        font-size: 2.7rem;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+
+    .section-title h1 {
+        font-size: 2.4rem;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+
+    .section-title h1 {
+        font-size: 2.1rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+
+    .section-title h1 {
+        font-size: 1.9rem;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
 #about {
     background-color: var(--A-S-C);
 }
@@ -674,7 +686,9 @@ div .abme .tcolor {
     padding-bottom: 10px;
 }
 
-/* MEDIA QUERRIS ABOUT */
+/*--------------------------------------------------------------
+# Media Queries About
+--------------------------------------------------------------*/
 @media only screen and (max-width: 768px) {
 
     .heading {
@@ -743,7 +757,10 @@ div .abme .tcolor {
     }
 }
 
-/* Skills */
+
+/*--------------------------------------------------------------
+# Skills
+--------------------------------------------------------------*/
 #skills {
     background-color: var(--h-s-p);
     margin-top: -8px;
@@ -788,7 +805,9 @@ div .abme .tcolor {
 }
 
 
-/* Services */
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
 #services {
     background-color: var(--A-S-C);
 }
@@ -858,7 +877,9 @@ section div .text-tit {
     transition: 0.3s all linear;
 }
 
-/* MEDIA QUERRIS SERVICES */
+/*--------------------------------------------------------------
+# Media Queries Services
+--------------------------------------------------------------*/
 @media only screen and (max-width: 768px) {
 
     .services .icon-box {
@@ -867,7 +888,9 @@ section div .text-tit {
 }
 
 
-/* Portfolio */
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
 #portfolio {
     background-color: var(--h-s-p);
 }
@@ -875,7 +898,6 @@ section div .text-tit {
 .portfolio {
     padding-bottom: 40px;
 }
-
 
 .portfolio .portfolio-item {
     margin-bottom: 30px;
@@ -1032,7 +1054,9 @@ section div .text-tit {
     right: 15px;
 }
 
-/* MEDIA QUERRIS PORTFOLIO */
+/*--------------------------------------------------------------
+# Media Queries Portfolio
+--------------------------------------------------------------*/
 @media only screen and (max-width: 425px) {
 
     .portfolio #portfolio-flters li {
@@ -1058,7 +1082,9 @@ section div .text-tit {
 }
 
 
-/* Contact form */
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
 #contact {
     background-color: var(--A-S-C);
 }
@@ -1196,7 +1222,9 @@ section div .text-tit {
     background: var(--hover);
 }
 
-/* MEDIA QUERRIS CONTACT */
+/*--------------------------------------------------------------
+# Media Queries Contact
+--------------------------------------------------------------*/
 @media only screen and (max-width: 768px) {
 
     .butto {
@@ -1242,7 +1270,9 @@ section div .text-tit {
 }
 
 
-/* Footer */
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
 #copyR {
     background-color: var(--h-s-p);
     padding: 20px;
@@ -1341,3 +1371,18 @@ section div .text-tit {
     -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
+
+/*--------------------------------------------------------------
+# Media Queries Back To Top
+--------------------------------------------------------------*/
+@media only screen and (max-width: 550px) {
+    .progress-wrap {
+        right: 10px;
+        bottom: 10px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# THE END
+--------------------------------------------------------------*/
