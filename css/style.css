@@ -100,15 +100,6 @@ html {
     --my-btn: #fff;
 }
 
-
-.animate__animated {
-    --animate-duration: 1.5s;
-}
-
-.animate__animated {
-    --animate-duration: 1.5s;
-}
-
 @media (min-width: 1024px) {
     body::before {
         background-attachment: fixed;
