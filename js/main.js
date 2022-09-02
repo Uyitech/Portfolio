@@ -71,6 +71,17 @@ AOS.init({
 
 });
 
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 500);
+}
+
+function showPage() {
+    document.getElementById("preloader").style.display = "none";
+    document.getElementById("main").style.display = "block";
+}
+
 
 // Back to Top
 $(document).ready(function () {
@@ -123,3 +134,24 @@ var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
     s0.parentNode.insertBefore(s1, s0);
 })();
 // End of Tawk.to Script
+
+
+function sendContact() {
+    var valid;
+    // valid = validateContact();
+    // if (valid) {
+    jQuery.ajax({
+        url: "../../contact.php",
+        data: 'name=' + $("#name").val() + '&email=' +
+            $("#email").val() + '&subject=' +
+            $("#subject").val() + '&message=' +
+            $(message).val(),
+        type: "POST",
+        success: function (data) {
+            $("#mail-status").html(data);
+            return false;
+        },
+        error: function () { }
+    });
+    // }
+}
