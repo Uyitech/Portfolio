@@ -442,7 +442,8 @@
 
                     <!--=======Text Field=======-->
                     <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-up">
-                        <form action="" method="post" role="form" class="contact-form">
+                        <form action="" target="_self" method="post" role="form" class="contact-form" id="contact-form"
+                            onsubmit="return false" onClick="sendContact();" name="contact-form">
                             <div class="row">
                                 <div class="form-group col-md-6">
                                     <label for="name">Your Name</label>
@@ -461,9 +462,13 @@
                                 <label for="name">Message</label>
                                 <textarea class="form-control" name="message" id="message" rows="9" required></textarea>
                             </div>
-                            <div id="mail-status"></div>
-                            <button class="butto" onClick="sendContact();">Send Message <i
-                                    class="fa fa-send"></i></button>
+                            <div id="mail-status" class="mail-status mt-3" style="display: none;">
+                                Message sent successfully
+                            </div>
+                            <button class="butto">
+                                Send Message
+                                <i class="fa fa-send"></i>
+                            </button>
                         </form>
                     </div>
                 </div>

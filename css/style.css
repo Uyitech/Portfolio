@@ -1315,22 +1315,16 @@ section div .text-tit {
     }
 }
 
-.success {
+div #mail-status {
     background-color: green;
-    width: 100%;
+    width: 290px;
     height: 40px;
-    padding: 6px 10px;
-    color: #fff;
+    margin: auto;
     border-radius: 3px;
-}
-
-.error {
-    background-color: red;
-    width: 100%;
-    height: 40px;
-    padding: 6px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #fff;
-    border-radius: 3px;
 }
 
 

@@ -138,20 +138,57 @@ var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
 
 function sendContact() {
     var valid;
-    // valid = validateContact();
-    // if (valid) {
-    jQuery.ajax({
-        url: "../../contact.php",
-        data: 'name=' + $("#name").val() + '&email=' +
-            $("#email").val() + '&subject=' +
-            $("#subject").val() + '&message=' +
-            $(message).val(),
-        type: "POST",
-        success: function (data) {
-            $("#mail-status").html(data);
-            return false;
-        },
-        error: function () { }
-    });
-    // }
+    valid = validateContact();
+    if (valid) {
+        jQuery.ajax({
+            url: "../../contact.php",
+            data: 'name=' + $("#name").val() + '&email=' +
+                $("#email").val() + '&subject=' +
+                $("#subject").val() + '&message=' +
+                $(message).val(),
+            type: "POST",
+            success: function (data) {
+                $("#mail-status").show(1000, function () {
+                    $("#mail-status").fadeOut(3000);
+                }
+                );
+                document.getElementById("contact-form").reset();
+
+                return false;
+            },
+            error: function () {
+
+            }
+        });
+    }
+}
+
+function validateContact() {
+    var valid = true;
+    if (!$("#name").val()) {
+        // $("#name-info").html("(required)");
+        $("#name").css('background-color', 'var(--contact-input)');
+        valid = false;
+    }
+    if (!$("#email").val()) {
+        // $("#email-info").html("(required)");
+        $("#email").css('background-color', 'var(--contact-input)');
+        valid = false;
+    }
+    if (!$("#email").val().match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
+        // $("#email-info").html("(invalid)");
+        $("#email").css('background-color', 'var(--contact-input)');
+        valid = false;
+    }
+    if (!$("#subject").val()) {
+        // $("#subject-info").html("(required)");
+        $("#subject").css('background-color', 'var(--contact-input)');
+        valid = false;
+    }
+    if (!$("#message").val()) {
+        // $("#message-info").html("(required)");
+        $("#message").css('background-color', 'var(--contact-input)');
+        valid = false;
+    }
+    return valid;
 }
