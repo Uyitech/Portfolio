@@ -20,7 +20,7 @@ const typed = new Typed(".color", {
 });
 
 
-// Nav A Menu
+// Nav Active Menu
 const li = document.querySelectorAll(".nav-item")
 const sec = document.querySelectorAll("section")
 
