@@ -1250,7 +1250,7 @@ section div .text-tit {
 }
 
 .butto {
-    border-radius: 0.350rem;
+    border-radius: 6px;
     background-color: var(--main-color);
     border: none;
     color: var(--port-li);
@@ -1274,7 +1274,7 @@ section div .text-tit {
 @media only screen and (max-width: 768px) {
 
     .butto {
-        border-radius: 0.330rem;
+        border-radius: 0.300rem;
         font-size: 15px;
         height: 41px;
         width: 160px;
@@ -1285,7 +1285,7 @@ section div .text-tit {
 @media only screen and (max-width: 425px) {
 
     .butto {
-        border-radius: 0.310rem;
+        border-radius: 0.270rem;
         font-size: 14px;
         height: 38px;
         width: 150px;
@@ -1296,7 +1296,7 @@ section div .text-tit {
 @media only screen and (max-width: 375px) {
 
     .butto {
-        border-radius: 0.300rem;
+        border-radius: 0.250rem;
         font-size: 13px;
         height: 33px;
         width: 145px;
@@ -1307,7 +1307,7 @@ section div .text-tit {
 @media only screen and (max-width: 320px) {
 
     .butto {
-        border-radius: 0.290rem;
+        border-radius: 0.250rem;
         font-size: 13px;
         height: 30px;
         width: 140px;
@@ -1316,11 +1316,11 @@ section div .text-tit {
 }
 
 div #mail-status {
-    background-color: green;
-    width: 290px;
-    height: 40px;
-    margin: auto;
-    border-radius: 3px;
+    background-color: rgb(8, 147, 8);
+    width: 260px;
+    height: 45px;
+    margin-top: -10px;
+    border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
