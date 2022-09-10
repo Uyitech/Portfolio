@@ -20,6 +20,7 @@ body {
     --main-color: #344ee5;
     --navbar: #101215;
     --box-shadow-navbar: none;
+    --preloader-text: #fff;
     --logo-other: #fff;
     --section-title: #ffffff;
     --h1-before: #ddd;
@@ -62,6 +63,7 @@ body {
     --main-color: #344ee5;
     --navbar: #fff;
     --box-shadow-navbar: rgba(100, 100, 100, 0.3);
+    --preloader-text: #fff;
     --logo-other: #000000;
     --section-title: #1e1e1e;
     --h1-before: #414040;
@@ -118,71 +120,25 @@ a {
     display: flex;
     z-index: 9999;
     position: fixed;
-    position: absolute;
     align-items: center;
     justify-content: center;
-    background: var(--h-s-p);
+    background: black;
 }
 
 .loader .spinner-grow {
     width: 47px;
     height: 47px;
+    z-index: 9999;
     position: absolute;
-    /* background-color: red; */
-    z-index: 9999;
+    background: #d7dde2d5;
 }
 
-.loader span {
-    color: white;
+.loader .loading-text {
     display: flex;
-    justify-content: center;
+    margin-top: 90px;
     align-items: center;
-    margin-top: 80px;
-}
-
-.loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9999;
-    background: var(--h-s-p);
-}
-
-/* .spinner-grow:before {
-    content: "";
-    width: 60px;
-    height: 60px;
-    position: fixed;
-    border-radius: 50%;
-    top: calc(50% - 30px);
-    left: calc(50% - 30px);
-    border: 5px solid var(--h-s-p);
-    border-top: 5px solid var(--main-color);
-    border-bottom: 5px solid var(--main-color);
-    animation: animate-preloader 1s linear infinite;
-    -webkit-animation: animate-preloader 1s linear infinite;
-} */
-
-@-webkit-keyframes animate-preloader {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes animate-preloader {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
+    justify-content: center;
+    color: var(--preloader-text);
 }
 
 /*--------------------------------------------------------------
@@ -206,10 +162,10 @@ a {
 }
 
 #navBar #logo {
-    color: var(--logo-other);
     font-weight: 600;
     font-size: 35px;
     transition: 0.4s;
+    color: var(--logo-other);
 }
 
 #navBar #logo:hover {
@@ -221,10 +177,10 @@ a {
 }
 
 #navBar .nav-item {
+    margin-left: 0;
     position: relative;
     padding-right: 10px;
     padding-bottom: 8px;
-    margin-left: 0;
 }
 
 .navbar-collapse {

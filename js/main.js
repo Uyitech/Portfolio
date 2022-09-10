@@ -77,7 +77,7 @@ AOS.init({
 var myVar;
 
 function myFunction() {
-    myVar = setTimeout(showPage, 1500);
+    myVar = setTimeout(showPage, 1000);
 }
 
 function showPage() {
