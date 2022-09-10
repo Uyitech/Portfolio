@@ -18,8 +18,8 @@ html {
 
 :root {
     --main-color: #344ee5;
-    --navbar: #202020;
-    --box-shadow-navbar: rgba(100, 100, 100, 0.3);
+    --navbar: #101215;
+    --box-shadow-navbar: none;
     --logo-other: #fff;
     --section-title: #ffffff;
     --h1-before: #ddd;
@@ -27,7 +27,7 @@ html {
     --A-S-C: #0D0D0D;
     --full-text: #fff;
     --home-p: rgba(143, 143, 143, 0.64);
-    --home-h3: #fff;
+    --home-h3: #ccd6f6;
     --bx-icon: #fff;
     --bx: #353535;
     --hover: #647bff;
@@ -163,18 +163,20 @@ a {
 # Navbar
 --------------------------------------------------------------*/
 #navBar {
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    position: fixed;
     overflow: hidden;
-    background-color: var(--navbar);
+    transition: 0.4s;
     padding-top: 2px;
     padding-bottom: 2px;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    box-shadow: 1px 2px 15px var(--box-shadow-navbar);
-    transition: 0.4s;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 99;
+    box-shadow: 1px 2px 7.5px var(--box-shadow-navbar);
+}
+
+.navbar.scrolled {
+    background: var(--navbar);
+    transition: background 0.3s;
 }
 
 #navBar #logo {
@@ -199,13 +201,90 @@ a {
     margin-left: 0;
 }
 
-#sun {
-    height: 25px;
-    width: 25px;
-    cursor: pointer;
-    margin-top: 8px;
-    margin-left: 6px;
+.navbar-collapse {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid;
+    border-radius: 10px;
+    background: var(--navbar);
+    transition: 0.4s;
 }
+
+.navbar-collapse .navbar-nav {
+    padding: 7px 0 5px 20px;
+}
+
+@media screen and (min-width: 992px) {
+    .navbar-collapse {
+        margin-top: 0;
+        margin-bottom: 0;
+        border: none;
+        border-radius: 0px;
+        background: none;
+        transition: 0.4s;
+    }
+
+    .navbar-collapse .navbar-nav {
+        padding: 0;
+    }
+}
+
+.form-switch .form-check-input {
+    order: 2;
+    border: none;
+    height: 1.5rem;
+    margin-top: 0;
+    margin-left: 0 !important;
+    width: 2.875em !important;
+}
+
+#navBar .form-switch {
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.form-switch .form-check-label:first-of-type {
+    order: 1;
+    margin-right: 0.625rem;
+}
+
+.form-switch .form-check-label:last-of-type {
+    order: 3;
+    margin-left: 0.625rem;
+}
+
+.form-switch .form-check-label .bi {
+    color: var(--logo-other);
+}
+
+.form-switch .form-check-input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.form-check-input:checked {
+    border-color: var(--main-color) !important;
+    background-color: var(--main-color) !important;
+}
+
+.form-check-input {
+    border-color: var(--main-color) !important;
+    background-color: var(--main-color) !important;
+}
+
+.form-switch .form-check-input[type=checkbox] {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+
+.form-switch .form-check-input:focus[type=checkbox] {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+
+.form-switch .form-check-input:checked[type=checkbox] {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+
 
 @media (min-width: 768px) {
     #navBar .nav-item {
@@ -281,9 +360,9 @@ nav button.navbar-toggler:active {
 .navbar-toggler span {
     display: block;
     background: var(--logo-other);
-    height: 2px;
-    width: 27px;
-    margin-top: 6px;
+    height: 1.65px;
+    width: 24px;
+    margin-top: 5px;
     margin-bottom: 6px;
     transform: rotate(0deg);
     left: 0;
@@ -333,7 +412,7 @@ nav button.navbar-toggler:active {
     #navBar #logo {
         color: var(--logo-other);
         font-weight: 600;
-        font-size: 25px;
+        font-size: 27px;
         transition: 0.4s;
     }
 }
@@ -349,12 +428,10 @@ nav button.navbar-toggler:active {
 
 #home .container {
     padding-top: 100px;
-    padding-top: 100px;
 }
 
 .profile {
-    width: 33rem;
-    height: 33rem;
+    width: 35rem;
 }
 
 .display-table {
@@ -373,7 +450,7 @@ nav button.navbar-toggler:active {
     font-family: 'El Messiri', sans-serif;
     position: relative;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: var(--home-h3);
 }
 
@@ -384,7 +461,7 @@ nav button.navbar-toggler:active {
     font-weight: 600;
     color: var(--main-color);
     letter-spacing: 0.063rem;
-    margin-top: -15px;
+    margin-top: -5px;
     margin-bottom: -0.5rem;
 }
 
@@ -478,7 +555,7 @@ nav button.navbar-toggler:active {
     #home .profile {
         width: 20rem;
         height: 20rem;
-        margin-top: 50px;
+        margin-top: 30px;
         text-align: center;
         align-items: center;
     }

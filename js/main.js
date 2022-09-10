@@ -1,14 +1,17 @@
-// Toggle Dark and Light mode
-const sun = document.getElementById("sun")
+// const switchElement = document.querySelector('.form-switch')
+const switchElement = document.getElementById("theme-mode")
 
-sun.onclick = function () {
-    document.body.classList.toggle("light");
-    if (document.body.classList.contains("light")) {
-        sun.src = "img/moon.png";
-    } else {
-        sun.src = "img/sun.png";
-    }
-}
+switchElement.addEventListener('click', () => {
+    document.body.classList.toggle('light')
+})
+
+
+$(function () {
+    $(document).scroll(function () {
+        var $nav = $("#navBar");
+        $nav.toggleClass("scrolled", $(this).scrollTop() > 30);
+    });
+});
 
 
 // AUTOTYPE
