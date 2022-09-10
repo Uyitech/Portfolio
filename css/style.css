@@ -8,12 +8,12 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    scroll-padding-top: 2rem;
+    scroll-padding-top: 1rem;
     font-family: 'Poppins', sans-serif;
 }
 
-html {
-    scroll-behavior: smooth;
+body {
+    background-color: #040404 !important;
 }
 
 :root {
@@ -100,12 +100,6 @@ html {
     --my-btn: #fff;
 }
 
-@media (min-width: 1024px) {
-    body::before {
-        background-attachment: fixed;
-    }
-}
-
 a {
     text-decoration: none;
 }
@@ -113,18 +107,50 @@ a {
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
-#preloader {
+.loader {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    z-index: 9999;
+    position: fixed;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background: var(--h-s-p);
+}
+
+.loader .spinner-grow {
+    width: 47px;
+    height: 47px;
+    position: absolute;
+    /* background-color: red; */
+    z-index: 9999;
+}
+
+.loader span {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.loader {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: 9999;
-    overflow: hidden;
     background: var(--h-s-p);
 }
 
-#preloader:before {
+/* .spinner-grow:before {
     content: "";
     width: 60px;
     height: 60px;
@@ -137,7 +163,7 @@ a {
     border-bottom: 5px solid var(--main-color);
     animation: animate-preloader 1s linear infinite;
     -webkit-animation: animate-preloader 1s linear infinite;
-}
+} */
 
 @-webkit-keyframes animate-preloader {
     0% {
