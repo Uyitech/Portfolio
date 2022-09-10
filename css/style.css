@@ -56,6 +56,8 @@ body {
     --contact-label: #c1c1c1;
     --contact-input: #343434;
     --contact-input-placeholder: #fff;
+    --scrollbar-track: rgb(44, 44, 44);
+    --scrollbar-thumb: #888;
     --my-btn: #fff;
 }
 
@@ -99,12 +101,40 @@ body {
     --contact-label: #444444;
     --contact-input: #E2E2E2;
     --contact-input-placeholder: #000;
+    --scrollbar-track: #8D8D8D;
+    --scrollbar-thumb: #585656;
     --my-btn: #fff;
 }
 
 a {
     text-decoration: none;
 }
+
+/*--------------------------------------------------------------
+# Custom Scrollbar
+--------------------------------------------------------------*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb);
+}
+
 
 /*--------------------------------------------------------------
 # Preloader
