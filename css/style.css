@@ -27,7 +27,7 @@ body {
     --h-s-p: #040404;
     --A-S-C: #0D0D0D;
     --full-text: #fff;
-    --home-p: rgba(143, 143, 143, 0.64);
+    --home-p: rgb(187 187 187 / 64%);
     --home-h3: #ccd6f6;
     --bx-icon: #fff;
     --bx: #353535;
@@ -195,6 +195,7 @@ a {
     font-weight: 600;
     font-size: 35px;
     transition: 0.4s;
+    font-family: 'Jost', sans-serif;
     color: var(--logo-other);
 }
 
@@ -203,6 +204,7 @@ a {
 }
 
 #navBar #logo span {
+    font-family: 'Jost', sans-serif;
     color: var(--main-color);
 }
 
@@ -246,12 +248,14 @@ a {
     border: none;
     height: 1.5rem;
     margin-top: 0;
+    cursor: pointer;
     margin-left: 0 !important;
     width: 2.875em !important;
 }
 
 #navBar .form-switch {
     display: flex;
+    cursor: pointer;
     padding-left: 0;
     margin-bottom: 0;
 }
@@ -267,6 +271,7 @@ a {
 }
 
 .form-switch .form-check-label .bi {
+    cursor: pointer;
     color: var(--logo-other);
 }
 
@@ -307,7 +312,8 @@ a {
 .navbar .nav-link {
     padding-right: 0 !important;
     padding-left: 0 !important;
-    font-size: 1rem;
+    font-size: 18px;
+    font-family: 'Jost', sans-serif;
     color: var(--logo-other);
     font-weight: 400;
     letter-spacing: 0.03em;
@@ -443,7 +449,8 @@ nav button.navbar-toggler:active {
 }
 
 .profile {
-    width: 35rem;
+    width: 33rem;
+    border-radius: 20rem;
 }
 
 .display-table {
@@ -459,7 +466,7 @@ nav button.navbar-toggler:active {
 }
 
 #home h3 {
-    font-family: 'El Messiri', sans-serif;
+    font-family: 'Jost', sans-serif;
     position: relative;
     align-items: center;
     font-size: 1.3rem;
@@ -467,28 +474,34 @@ nav button.navbar-toggler:active {
 }
 
 #home .uyi {
-    font-family: 'Rokkitt', serif;
+    font-family: 'Jost', sans-serif;
     text-transform: capitalize;
     font-size: 2.8rem;
     font-weight: 600;
     color: var(--main-color);
     letter-spacing: 0.063rem;
     margin-top: -5px;
-    margin-bottom: -0.5rem;
+    margin-bottom: 0.1rem;
 }
 
 .full {
     position: relative;
     z-index: 2;
+    font-family: 'Jost', sans-serif;
     color: var(--full-text);
     font-size: 2.5rem;
     font-weight: 600;
     margin-top: 10px;
 }
 
+.full .color {
+    font-family: 'Jost', sans-serif;
+}
+
 #home p {
     color: var(--home-p);
-    font-size: 1.2rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 1.3rem;
     font-weight: 400;
     margin-bottom: 1.5rem;
     letter-spacing: 0.4px;
@@ -512,13 +525,13 @@ nav button.navbar-toggler:active {
 
 .social .bx:hover {
     background: var(--main-color);
-    transition: 0.3s all linear;
+    transition: 0.3s all;
     border-color: var(--main-color);
     color: var(--port-li);
 }
 
 .button {
-    border-radius: 0.350rem;
+    border-radius: 0.320rem;
     background: var(--main-color);
     border: none;
     color: var(--bx-icon);
@@ -526,12 +539,13 @@ nav button.navbar-toggler:active {
     align-items: center;
     height: 45px;
     width: 165px;
-    transition: all 0.4s;
     cursor: pointer;
+    transition: all 0.4s;
     margin-bottom: 2.5rem;
 }
 
 .button:hover {
+    transition: all 0.4s;
     background: var(--hover);
 }
 
@@ -712,7 +726,7 @@ nav button.navbar-toggler:active {
 }
 
 .section-title h1 {
-    font-family: 'Rokkitt';
+    font-family: 'Jost', sans-serif;
     font-size: 2.8rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -785,11 +799,12 @@ nav button.navbar-toggler:active {
 }
 
 .abme {
-    color: var(--abt-foot);
-    font-size: 1.2rem;
     font-weight: 400;
-    letter-spacing: 0.030rem;
+    line-height: 30px;
     text-align: center;
+    font-size: 1.16rem;
+    color: var(--abt-foot);
+    letter-spacing: 0.030rem;
 }
 
 div .abme .tcolor {
@@ -798,14 +813,16 @@ div .abme .tcolor {
 
 .heading {
     font-size: 4.5rem;
-    text-transform: uppercase;
-    color: var(--heading-text);
     text-align: right;
     font-weight: bold;
     margin-bottom: -84px;
+    text-transform: uppercase;
+    color: var(--heading-text);
+    font-family: 'Jost', sans-serif;
 }
 
 .heading2 {
+    font-family: 'Jost', sans-serif;
     font-size: 4.5rem;
     text-transform: uppercase;
     color: var(--heading-text);
@@ -902,34 +919,36 @@ div .abme .tcolor {
     height: 50px;
     display: block;
     background: none;
+    margin-bottom: 5px;
 }
 
 #skills .progress .skill {
-    padding: 10px 0;
     margin: 0;
-    text-transform: uppercase;
     display: block;
-    font-weight: 600;
+    padding: 10px 0;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
     color: var(--progress-text);
 }
 
 #skills .progress .skill .val {
     float: right;
-    font-size: normal;
+    font-size: 12px;
+    font-style: normal;
 }
 
 #skills .progress-bar-wrap {
-    background: var(--progress-bar);
     border-radius: 10px;
+    background: var(--progress-bar);
 }
 
 #skills .progress-bar {
     width: 2px;
-    height: 10px;
+    height: 9px;
     transition: 0.9s;
-    background-color: var(--main-color);
-    border: 10px;
     border-radius: 10px;
+    background-color: var(--main-color);
 }
 
 
@@ -945,6 +964,8 @@ div .abme .tcolor {
 }
 
 section div .text-tit {
+    font-size: 1.6rem;
+    font-family: 'Jost', sans-serif;
     color: var(--services-head);
     text-align: center;
     margin-top: inherit;
@@ -1130,7 +1151,8 @@ section div .text-tit {
 }
 
 .portfolio .portfolio-wrap .portfolio-info h4 {
-    font-size: 20px;
+    font-size: 1.6rem;
+    font-family: 'Jost', sans-serif;
     color: var(--port-wrap-items);
     font-weight: 600;
 }
@@ -1257,7 +1279,9 @@ section div .text-tit {
 }
 
 .contact .info h4 {
+    font-family: 'Jost', sans-serif;
     padding: 0 0 0 60px;
+    letter-spacing: 0.7px;
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 5px;
@@ -1426,9 +1450,12 @@ div #mail-status {
 }
 
 .copyR p {
+    font-family: 'Jost', sans-serif;
+    letter-spacing: 0.7px;
+    font-weight: 400;
     margin: 0;
     color: var(--abt-foot);
-    font-size: 15px;
+    font-size: 17px;
 }
 
 
