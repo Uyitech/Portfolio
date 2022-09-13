@@ -1,4 +1,4 @@
-// const switchElement = document.querySelector('.form-switch')
+// Dark and Light Mode
 const switchElement = document.getElementById("theme-mode")
 
 switchElement.addEventListener('click', () => {
@@ -46,36 +46,34 @@ const mixerPortfolio = mixitup('.portfolio-container', {
         duration: 300
     }
 });
-// Link Active Work
+
+
+// Link Active
 const linkWork = document.querySelectorAll('.filter')
 
 function activeWork() {
     linkWork.forEach(l => l.classList.remove('active-work'))
     this.classList.add('active-work')
-
 }
-
 linkWork.forEach(l => l.addEventListener("click", activeWork))
 
 
 // Animation
 AOS.init();
 
-// You can also pass an optional settings object
-// below listed default settings
 AOS.init({
-    // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-    offset: 170, // offset (in px) from the original trigger point
-    delay: 100, // values from 0 to 3000, with step 50ms
-    duration: 1600, // values from 0 to 3000, with step 50ms
-    easing: 'ease', // default easing for AOS animations
-    once: true, // whether animation should happen only once while scrolling down
-    mirror: false, // whether elements should animate out while scrolling past them
-
+    // Settings 
+    offset: 170,
+    delay: 100,
+    duration: 1600,
+    easing: 'ease',
+    once: true,
+    mirror: false,
 });
 
-var myVar;
 
+// Preloader
+var myVar;
 function myFunction() {
     myVar = setTimeout(showPage, 700);
 }
@@ -139,6 +137,7 @@ var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
 // End of Tawk.to Script
 
 
+// Contact form
 function sendContact() {
     var valid;
     valid = validateContact();
@@ -156,12 +155,9 @@ function sendContact() {
                 }
                 );
                 document.getElementById("contact-form").reset();
-
                 return false;
             },
-            error: function () {
-
-            }
+            error: function () { }
         });
     }
 }
@@ -169,17 +165,14 @@ function sendContact() {
 function validateContact() {
     var valid = true;
     if (!$("#name").val()) {
-        // $("#name-info").html("(required)");
         $("#name").css('background-color', 'var(--contact-input)');
         valid = false;
     }
     if (!$("#email").val()) {
-        // $("#email-info").html("(required)");
         $("#email").css('background-color', 'var(--contact-input)');
         valid = false;
     }
     if (!$("#email").val().match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
-        // $("#email-info").html("(invalid)");
         $("#email").css('background-color', 'var(--contact-input)');
         valid = false;
     }
@@ -189,7 +182,6 @@ function validateContact() {
         valid = false;
     }
     if (!$("#message").val()) {
-        // $("#message-info").html("(required)");
         $("#message").css('background-color', 'var(--contact-input)');
         valid = false;
     }

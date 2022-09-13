@@ -26,8 +26,8 @@ body {
     --h1-before: #ddd;
     --h-s-p: #040404;
     --A-S-C: #0D0D0D;
-    --full-text: #fff;
-    --home-p: rgb(187 187 187 / 64%);
+    --full-text: #dfe6fb;
+    --home-p: #9aa0b1;
     --home-h3: #ccd6f6;
     --bx-icon: #fff;
     --bx: #353535;
@@ -160,7 +160,7 @@ a {
     height: 47px;
     z-index: 9999;
     position: absolute;
-    background: #d7dde2d5;
+    background: #abb4bbd5;
 }
 
 .loader .loading-text {
@@ -169,6 +169,7 @@ a {
     align-items: center;
     justify-content: center;
     color: var(--preloader-text);
+    font-family: 'Jost', sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -491,7 +492,8 @@ nav button.navbar-toggler:active {
     color: var(--full-text);
     font-size: 2.5rem;
     font-weight: 600;
-    margin-top: 10px;
+    margin-top: 6px;
+    margin-bottom: 10px;
 }
 
 .full .color {
@@ -509,7 +511,7 @@ nav button.navbar-toggler:active {
 
 .social {
     align-items: center;
-    word-spacing: 0.5rem;
+    /* word-spacing: 0.5rem; */
     margin-top: -0.625rem;
     margin-bottom: 0.938rem;
 }
@@ -517,10 +519,11 @@ nav button.navbar-toggler:active {
 .social .bx {
     font-size: 1.3rem;
     padding: 0.625rem;
+    margin-right: 8px;
     border-radius: 50%;
     color: var(--services-bx);
     border: 1.5px solid var(--bx);
-    transition: 0.3s all linear;
+    transition: 0.3s all;
 }
 
 .social .bx:hover {
@@ -530,6 +533,10 @@ nav button.navbar-toggler:active {
     color: var(--port-li);
 }
 
+#home a {
+    text-decoration: none;
+}
+
 .button {
     border-radius: 0.320rem;
     background: var(--main-color);
@@ -537,11 +544,17 @@ nav button.navbar-toggler:active {
     color: var(--bx-icon);
     text-align: center;
     align-items: center;
+    text-decoration: none;
     height: 45px;
     width: 165px;
     cursor: pointer;
     transition: all 0.4s;
     margin-bottom: 2.5rem;
+}
+
+.button .fa {
+    margin-right: 5px;
+    font-size: 15px;
 }
 
 .button:hover {
@@ -600,6 +613,8 @@ nav button.navbar-toggler:active {
         font-size: 14px;
         height: 40px;
         width: 160px;
+        display: flex;
+        justify-content: center;
         text-align: center;
         align-items: center;
         margin: auto;
@@ -671,15 +686,7 @@ nav button.navbar-toggler:active {
 
 @media only screen and (max-width: 375px) {
     #home .uyi {
-        font-size: 2.2rem;
-    }
-
-    #home .full {
-        font-size: 1.5rem;
-    }
-
-    #home p {
-        font-size: 0.7rem;
+        font-size: 2rem;
     }
 
     #home .social .bx {
@@ -847,6 +854,7 @@ div .abme .tcolor {
     .abme {
         font-size: 1.05rem;
         font-weight: 400;
+        line-height: 25.5px;
         letter-spacing: 0.030rem;
     }
 }
@@ -864,6 +872,7 @@ div .abme .tcolor {
     .abme {
         font-size: 0.9rem;
         font-weight: 400;
+        line-height: 24px;
         letter-spacing: 0.030rem;
     }
 }
@@ -881,6 +890,7 @@ div .abme .tcolor {
     .abme {
         font-size: 0.7rem;
         font-weight: 400;
+        line-height: 18px;
         letter-spacing: 0.030rem;
     }
 }
