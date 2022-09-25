@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 /*--------------------------------------------------------------
 # The Start
@@ -12,8 +12,8 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    background-color: #040404 !important;
+html body {
+    background-color: #040404;
 }
 
 :root {
@@ -450,8 +450,8 @@ nav button.navbar-toggler:active {
 }
 
 .profile {
-    width: 33rem;
-    border-radius: 20rem;
+    width: 35rem;
+    border-radius: 50%;
 }
 
 .display-table {
@@ -511,30 +511,26 @@ nav button.navbar-toggler:active {
 
 .social {
     align-items: center;
-    /* word-spacing: 0.5rem; */
     margin-top: -0.625rem;
     margin-bottom: 0.938rem;
 }
 
 .social .bx {
     font-size: 1.3rem;
-    padding: 0.625rem;
+    padding: 0.660rem;
     margin-right: 8px;
     border-radius: 50%;
     color: var(--services-bx);
     border: 1.5px solid var(--bx);
-    transition: 0.3s all;
+    transition: 0.73s all;
 }
 
 .social .bx:hover {
-    background: var(--main-color);
-    transition: 0.3s all;
-    border-color: var(--main-color);
+    transition: 0.75s all;
     color: var(--port-li);
-}
-
-#home a {
-    text-decoration: none;
+    transform: rotate(360deg);
+    background: var(--main-color);
+    border-color: var(--main-color);
 }
 
 .button {
@@ -548,7 +544,7 @@ nav button.navbar-toggler:active {
     height: 45px;
     width: 165px;
     cursor: pointer;
-    transition: all 0.4s;
+    transition: all 0.74s;
     margin-bottom: 2.5rem;
 }
 
@@ -558,7 +554,7 @@ nav button.navbar-toggler:active {
 }
 
 .button:hover {
-    transition: all 0.4s;
+    transition: all 0.74s;
     background: var(--hover);
 }
 
@@ -619,6 +615,10 @@ nav button.navbar-toggler:active {
         align-items: center;
         margin: auto;
     }
+
+    .br {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -660,6 +660,10 @@ nav button.navbar-toggler:active {
 }
 
 @media only screen and (max-width: 425px) {
+    #home h3 {
+        font-size: 1.2rem;
+    }
+
     #home .uyi {
         font-size: 2.2rem;
     }
@@ -681,12 +685,21 @@ nav button.navbar-toggler:active {
 
     #home .social .bx {
         font-size: 1.3rem;
+        margin-right: 5px;
     }
 }
 
 @media only screen and (max-width: 375px) {
+    #home h3 {
+        font-size: 1.1rem;
+    }
+
     #home .uyi {
         font-size: 2rem;
+    }
+
+    #home .full {
+        font-size: 1.5rem;
     }
 
     #home .social .bx {
@@ -700,8 +713,12 @@ nav button.navbar-toggler:active {
 }
 
 @media only screen and (max-width: 320px) {
+    #home h3 {
+        font-size: 1rem;
+    }
+
     #home .uyi {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 
     #home .full {
@@ -1282,6 +1299,7 @@ section div .text-tit {
 .contact {
     padding-bottom: 60px;
 }
+
 
 .contact .info {
     border-top: 3px solid var(--main-color);
