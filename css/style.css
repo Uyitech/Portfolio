@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&family=Karla:wght@300;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
 /*--------------------------------------------------------------
 # The Start
@@ -9,7 +9,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     scroll-padding-top: 1rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 html body {
@@ -32,6 +32,7 @@ html body {
     --bx-icon: #fff;
     --bx: #353535;
     --hover: #647bff;
+    --button-text: #fff;
     --abt-foot: #8f8f8f;
     --heading-text: #272727;
     --progress-text: #fff;
@@ -77,6 +78,7 @@ html body {
     --bx-icon: #fff;
     --bx: #353535;
     --hover: #647bff;
+    --button-text: #000;
     --abt-foot: #444444;
     --heading-text: #8D8D8D;
     --progress-text: #444444;
@@ -107,7 +109,7 @@ html body {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 /*--------------------------------------------------------------
@@ -533,30 +535,82 @@ nav button.navbar-toggler:active {
     border-color: var(--main-color);
 }
 
-.button {
-    border-radius: 0.320rem;
-    background: var(--main-color);
-    border: none;
-    color: var(--bx-icon);
-    text-align: center;
-    align-items: center;
-    text-decoration: none;
-    height: 45px;
-    width: 165px;
-    cursor: pointer;
-    transition: all 0.74s;
-    margin-bottom: 2.5rem;
-}
-
-.button .fa {
-    margin-right: 5px;
+/* button-1 btn start */
+.button-1 {
+    margin: 10px;
+    height: 55px;
+    outline: none;
+    display: flex;
     font-size: 15px;
+    font-weight: 500;
+    transition: 0.45s;
+    position: relative;
+    padding: 15px 30px;
+    align-items: center;
+    transition-delay: 0s;
+    justify-content: center;
+    background: transparent;
+    color: var(--button-text);
+    text-transform: uppercase;
+    border: 2px solid var(--main-color);
 }
 
-.button:hover {
-    transition: all 0.74s;
-    background: var(--hover);
+.button-1:hover {
+    transition-delay: 0.5s;
+    color: #fff;
 }
+
+.button-1 span {
+    z-index: 100;
+    position: relative;
+    text-decoration: none;
+}
+
+.button-1::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    width: 20px;
+    height: 2px;
+    transform: translateY(-50%);
+    background: var(--main-color);
+    box-shadow: 5px -8px 0 var(--main-color), 5px 8px 0 var(--main-color);
+    transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay: 0.5s, 0.5s, 0s, 0s;
+}
+
+.button-1:hover::before {
+    width: 60%;
+    height: 100%;
+    left: -2px;
+    box-shadow: 5px 0 0 var(--main-color), 5px 0 0 var(--main-color);
+    transition-delay: 0s, 0s, 0.5s, 0.5s;
+}
+
+.button-1::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    width: 20px;
+    height: 2px;
+    transform: translateY(-50%);
+    background: var(--main-color);
+    box-shadow: -5px -8px 0 var(--main-color), -5px 8px 0 var(--main-color);
+    transition: width 0.5s, right 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay: 0.5s, 0.5s, 0s, 0s;
+}
+
+.button-1:hover::after {
+    width: 60%;
+    height: 100%;
+    right: -2px;
+    box-shadow: -5px 0 0 var(--main-color), -5px 0 0 var(--main-color);
+    transition-delay: 0s, 0s, 0.5s, 0.5s;
+}
+
+/* raulwwq0 btn end */
 
 #home .row {
     --bs-gutter-x: 4.5rem;
@@ -605,15 +659,9 @@ nav button.navbar-toggler:active {
     }
 
     #home button {
-        border-radius: 0.330rem;
-        font-size: 14px;
-        height: 40px;
-        width: 160px;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
+        height: 45px;
         margin: auto;
+        font-size: 14px;
     }
 
     .br {
@@ -647,15 +695,6 @@ nav button.navbar-toggler:active {
     #home .social {
         font-size: 1.3rem;
         text-align: center;
-    }
-
-    #home button {
-        border-radius: 0.330rem;
-        font-size: 14px;
-        height: 40px;
-        width: 160px;
-        text-align: center;
-        align-items: center;
     }
 }
 
@@ -707,7 +746,6 @@ nav button.navbar-toggler:active {
     }
 
     #home button {
-        border-radius: 0.300rem;
         font-size: 13px;
     }
 }
@@ -731,11 +769,6 @@ nav button.navbar-toggler:active {
 
     #home .social .bx {
         font-size: 1.2rem;
-    }
-
-    #home button {
-        border-radius: 0.290rem;
-        font-size: 13px;
     }
 }
 
@@ -829,10 +862,12 @@ nav button.navbar-toggler:active {
     font-size: 1.16rem;
     color: var(--abt-foot);
     letter-spacing: 0.030rem;
+    font-family: 'Karla', sans-serif;
 }
 
 div .abme .tcolor {
     color: var(--main-color);
+    font-family: 'Karla', sans-serif;
 }
 
 .heading {
@@ -1019,6 +1054,7 @@ section div .text-tit {
     margin-bottom: 0;
     color: var(--services-p);
     text-align: center;
+    font-family: 'Karla', sans-serif;
 }
 
 .services .bx {
@@ -1420,82 +1456,51 @@ section div .text-tit {
     color: var(--contact-input-placeholder);
 }
 
-.butto {
-    border-radius: 6px;
-    background-color: var(--main-color);
-    border: none;
-    color: var(--port-li);
-    text-align: center;
+.button-2 {
+    z-index: 1;
+    color: #fff;
     font-size: 16px;
-    width: 167px;
-    height: 46px;
-    transition: all 0.4s;
     cursor: pointer;
-    align-items: center;
+    overflow: hidden;
+    background: none;
+    position: relative;
+    padding: 10px 30px;
+    border-radius: 2px;
+    transition: 0.8s ease-out;
+    border: 1.5px solid var(--main-color);
 }
 
-.butto:hover {
-    transform: translateX(5px);
-    background: var(--hover);
+.button-2:hover {
+    color: var(--button-text);
 }
 
-/*--------------------------------------------------------------
-# Media Queries Contact
---------------------------------------------------------------*/
-@media only screen and (max-width: 768px) {
-
-    .butto {
-        border-radius: 0.300rem;
-        font-size: 15px;
-        height: 42px;
-        width: 160px;
-        text-align: center;
-    }
+.button-2::before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    height: 180%;
+    transition: 0.8s;
+    position: absolute;
+    background: var(--main-color);
+    border-radius: 0 0 50% 50%;
 }
 
-@media only screen and (max-width: 425px) {
-
-    .butto {
-        border-radius: 0.270rem;
-        font-size: 14px;
-        height: 40px;
-        width: 150px;
-        text-align: center;
-    }
+.button-2:hover::before {
+    height: 0%;
 }
 
-@media only screen and (max-width: 375px) {
-
-    .butto {
-        border-radius: 0.250rem;
-        font-size: 13px;
-        height: 38px;
-        width: 145px;
-        text-align: center;
-    }
-}
-
-@media only screen and (max-width: 320px) {
-
-    .butto {
-        border-radius: 0.250rem;
-        font-size: 13px;
-        height: 35px;
-        width: 135px;
-        text-align: center;
-    }
-}
-
-div #mail-status {
-    background-color: rgb(8, 147, 8);
-    width: 260px;
+#mail-status {
+    width: 100%;
     height: 45px;
+    display: flex;
+    color: #ffffff;
     margin-top: -10px;
     border-radius: 4px;
-    display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    background-color: rgb(8, 147, 8);
 }
 
 
