@@ -610,8 +610,6 @@ nav button.navbar-toggler:active {
     transition-delay: 0s, 0s, 0.5s, 0.5s;
 }
 
-/* raulwwq0 btn end */
-
 #home .row {
     --bs-gutter-x: 4.5rem;
 }
@@ -1467,7 +1465,7 @@ section div .text-tit {
     padding: 10px 30px;
     border-radius: 2px;
     transition: 0.8s ease-out;
-    border: 1.5px solid var(--main-color);
+    border: 1px solid var(--main-color);
 }
 
 .button-2:hover {

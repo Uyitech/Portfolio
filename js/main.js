@@ -75,7 +75,7 @@ AOS.init({
 // Preloader
 var myVar;
 function myFunction() {
-    myVar = setTimeout(showPage, 200);
+    myVar = setTimeout(showPage);
 }
 
 function showPage() {
